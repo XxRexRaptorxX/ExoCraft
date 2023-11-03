@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "X#X",
+    "XXX"
+    
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:crafting_table"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "exocraft:fabricator"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "structures": [
+    {
+      "structure": "enhanced_nature:nether_tree_1",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:nether_tree_2",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:nether_tree_3",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:nether_tree_3",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:nether_tree_4",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 50,
+    "separation": 40,
+    "salt": 32980230
+  }
+}

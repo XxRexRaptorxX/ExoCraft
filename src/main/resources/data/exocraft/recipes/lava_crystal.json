@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+  
+    {
+      "item": "exocraft:lava_crystal_block"
+    }
+  ],
+  
+  "result": {
+    "item": "exocraft:lava_crystal",
+    "count": 9
+  }
+}

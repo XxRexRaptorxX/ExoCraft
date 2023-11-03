@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "enhanced_nature:birch_tree_1",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:birch_tree_2",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:birch_tree_3",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 50,
+    "separation": 40,
+    "salt": 13204223
+  }
+}

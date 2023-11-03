@@ -1,0 +1,30 @@
+{
+  "structures": [
+    {
+      "structure": "enhanced_nature:cactus_1",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:cactus_2",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:cactus_3",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:cactus_4",
+      "weight": 1
+    },
+    {
+      "structure": "enhanced_nature:cactus_5",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 130,
+    "separation": 100,
+    "salt": 92300032
+  }
+}

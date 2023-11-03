@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "XXX",
+    "XXX",
+    "XXX"
+    
+  ],
+  "key": {
+    "X": {
+      "item": "exocraft:lava_crystal"
+    }
+  },
+  
+  
+  "result": {
+    "item": "exocraft:lava_crystal_block"
+  }
+}

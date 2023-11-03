@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "exocraft:items/industrial_multi_tool"
+    }
+}
