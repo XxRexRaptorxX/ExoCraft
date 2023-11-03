@@ -1,7 +1,6 @@
 {
   "replace": false,
-  "values":
-          [
-            "#forge:ores/lava_crystal"
-          ]
+  "values": [
+    "#forge:ores/lava_crystal"
+  ]
 }

@@ -1,7 +1,6 @@
 {
   "replace": false,
-  "values":
-          [
-            "exocraft:lava_crystal"
-          ]
+  "values": [
+    "exocraft:lava_crystal"
+  ]
 }

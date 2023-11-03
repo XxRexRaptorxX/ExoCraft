@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "exocraft:atlas_chestplate",
     "exocraft:legion_chestplate",
