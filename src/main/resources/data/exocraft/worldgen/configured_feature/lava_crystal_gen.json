@@ -1,0 +1,18 @@
+{
+  "config": {
+    "targets": [
+      {
+        "target": {
+          "tag": "minecraft:infiniburn_nether",
+          "predicate_type": "minecraft:tag_match"
+        },
+        "state": {
+          "Name": "exocraft:lava_crystal_ore"
+        }
+      }
+    ],
+    "size": 5,
+    "discard_chance_on_air_exposure": 0.0
+  },
+  "type": "minecraft:ore"
+}

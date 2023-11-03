@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "exocraft:block/lava_crystal_block"
+  }
+}

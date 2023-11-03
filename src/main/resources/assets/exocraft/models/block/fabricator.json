@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "exocraft:block/fabricator_front",
+        "up": "exocraft:block/fabricator_top",
+        "down": "exocraft:block/fabricator_bottom",
+        "north": "exocraft:block/fabricator_front",
+        "east": "exocraft:block/fabricator_side",
+        "west": "exocraft:block/fabricator_side",
+        "south": "exocraft:block/fabricator_front"
+    }
+}

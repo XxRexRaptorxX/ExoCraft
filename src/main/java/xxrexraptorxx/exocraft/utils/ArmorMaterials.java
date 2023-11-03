@@ -18,38 +18,6 @@ import java.util.function.Supplier;
 public enum ArmorMaterials implements ArmorMaterial {
 
     /**                              VANILLA ARMOR
-     LEATHER("leather", 5, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
-     p_266652_.put(ArmorItem.Type.BOOTS, 1);
-     p_266652_.put(ArmorItem.Type.LEGGINGS, 2);
-     p_266652_.put(ArmorItem.Type.CHESTPLATE, 3);
-     p_266652_.put(ArmorItem.Type.HELMET, 1);
-     }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-     return Ingredient.of(Items.LEATHER);
-     }),
-     CHAIN("chainmail", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266651_) -> {
-     p_266651_.put(ArmorItem.Type.BOOTS, 1);
-     p_266651_.put(ArmorItem.Type.LEGGINGS, 4);
-     p_266651_.put(ArmorItem.Type.CHESTPLATE, 5);
-     p_266651_.put(ArmorItem.Type.HELMET, 2);
-     }), 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> {
-     return Ingredient.of(Items.IRON_INGOT);
-     }),
-     IRON("iron", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-     p_266654_.put(ArmorItem.Type.BOOTS, 2);
-     p_266654_.put(ArmorItem.Type.LEGGINGS, 5);
-     p_266654_.put(ArmorItem.Type.CHESTPLATE, 6);
-     p_266654_.put(ArmorItem.Type.HELMET, 2);
-     }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-     return Ingredient.of(Items.IRON_INGOT);
-     }),
-     GOLD("gold", 7, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
-     p_266650_.put(ArmorItem.Type.BOOTS, 1);
-     p_266650_.put(ArmorItem.Type.LEGGINGS, 3);
-     p_266650_.put(ArmorItem.Type.CHESTPLATE, 5);
-     p_266650_.put(ArmorItem.Type.HELMET, 2);
-     }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> {
-     return Ingredient.of(Items.GOLD_INGOT);
-     }),
      DIAMOND("diamond", 33, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266649_) -> {
      p_266649_.put(ArmorItem.Type.BOOTS, 3);
      p_266649_.put(ArmorItem.Type.LEGGINGS, 6);
@@ -67,14 +35,47 @@ public enum ArmorMaterials implements ArmorMaterial {
      return Ingredient.of(Items.NETHERITE_INGOT);
      });
     **/
-    MECH(References.MODID + ":mech_suit", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    ATLAS(References.MODID + ":atlas", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 10, () -> {
+    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+        return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
+    }),
+    LEGION(References.MODID + ":legion", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+        p_266650_.put(ArmorItem.Type.BOOTS, 3);
+        p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266650_.put(ArmorItem.Type.HELMET, 3);
+    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+        return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
+    }),
+    STRYDER(References.MODID + ":stryder", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+        p_266650_.put(ArmorItem.Type.BOOTS, 3);
+        p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266650_.put(ArmorItem.Type.HELMET, 3);
+    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+        return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
+    }),
+    OGRE(References.MODID + ":ogre", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+        p_266650_.put(ArmorItem.Type.BOOTS, 3);
+        p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266650_.put(ArmorItem.Type.HELMET, 3);
+    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+        return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
+    }),
+    ION(References.MODID + ":ion", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+        p_266650_.put(ArmorItem.Type.BOOTS, 3);
+        p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266650_.put(ArmorItem.Type.HELMET, 3);
+    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     });
+
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;
