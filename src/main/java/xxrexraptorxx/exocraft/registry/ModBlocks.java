@@ -8,7 +8,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import xxrexraptorxx.exocraft.blocks.BlockQuicksand;
+import xxrexraptorxx.exocraft.blocks.LavaCrystalBlock;
+import xxrexraptorxx.exocraft.blocks.LavaCrystalOre;
 import xxrexraptorxx.exocraft.main.References;
 
 public class ModBlocks {
@@ -23,10 +24,10 @@ public class ModBlocks {
         ITEMS.register(bus);
     }
 
-    public static final RegistryObject<BlockQuicksand> QUICK_SAND = BLOCKS.register("quicksand", BlockQuicksand::new);
-    public static final RegistryObject<Item> QUICK_SAND_BLOCKITEM = ITEMS.register("quicksand", () -> new BlockItem(QUICK_SAND.get(), new Item.Properties()));
+    public static final RegistryObject<LavaCrystalOre> LAVA_CRYSTAL_ORE = BLOCKS.register("lava_crystal_ore", LavaCrystalOre::new);
+    public static final RegistryObject<Item> LAVA_CRYSTAL_ORE_BLOCKITEM = ITEMS.register("lava_crystal_ore", () -> new BlockItem(LAVA_CRYSTAL_ORE.get(), new Item.Properties()));
 
-    //public static final RegistryObject<Block> POISONED_IVY = BLOCKS.register("poisoned_ivy", () -> new FlowerBlock(MobEffects.POISON, 10, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
-    //public static final RegistryObject<Item> POISONED_IVY_BLOCKITEM = ITEMS.register("poisoned_ivy", () -> new BlockItem(POISONED_IVY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<LavaCrystalBlock> LAVA_CRYSTAL_BLOCK = BLOCKS.register("lava_crystal_block", LavaCrystalBlock::new);
+    public static final RegistryObject<Item> LAVA_CRYSTAL_BLOCKITEM = ITEMS.register("lava_crystal_block", () -> new BlockItem(LAVA_CRYSTAL_BLOCK.get(), new Item.Properties()));
 
 }
