@@ -17,7 +17,7 @@ public class BasicItem extends Item {
     @Override
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
         if (this == ModItems.LAVA_CRYSTAL.get()) {
-            return 5000;
+            return 2000;
         } else {
             return 0;
         }
