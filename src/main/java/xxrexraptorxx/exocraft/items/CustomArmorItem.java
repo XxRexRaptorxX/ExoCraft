@@ -8,10 +8,7 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import xxrexraptorxx.exocraft.main.Exocraft;
 import xxrexraptorxx.exocraft.utils.ArmorTypes;
-
-import java.util.logging.Logger;
 
 public class CustomArmorItem extends ArmorItem {
 
@@ -43,6 +40,8 @@ public class CustomArmorItem extends ArmorItem {
 
 	@Override
 	public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
+		player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1000, 0));
+
 		if(!level.isClientSide()) {
 
 			int atlasCounter = getMechSuitAmount(ArmorTypes.ATLAS, player);
