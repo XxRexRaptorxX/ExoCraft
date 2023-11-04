@@ -93,6 +93,28 @@ public class CustomArmorItem extends ArmorItem {
 					break;
 			}
 
+			//ION
+			switch (ionCounter) {
+				case 1:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 0, false, false, true));
+					break;
+				case 2:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 30, 0, false, false, true));
+					break;
+				case 3:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 30, 0, false, false, true));
+					break;
+				case 4:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 30, 0, false, false, true));
+					break;
+				default:
+					break;
+			}
+
 			//STRYDER
 			switch (stryderCounter) {
 				case 1:
