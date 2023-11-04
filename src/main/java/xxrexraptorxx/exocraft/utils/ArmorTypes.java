@@ -14,7 +14,7 @@ public enum ArmorTypes {
     private String registry_name;
 
     ArmorTypes(String registry_name) {
-        this.registry_name = References.MODID + ":" + registry_name;
+        this.registry_name = registry_name;
     }
 
 

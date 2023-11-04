@@ -2,6 +2,7 @@ package xxrexraptorxx.exocraft.items;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -27,8 +28,6 @@ public class CustomArmorItem extends ArmorItem {
 		Item leggings = player.getInventory().getArmor(1).getItem();
 		Item boots = player.getInventory().getArmor(0).getItem();
 
-		System.err.println("############################## " + helmet.toString() + " = " + armorType.getRegistryName());
-
 		if (helmet.toString().contains(armorType.getRegistryName())) amount++;
 		if (chestplate.toString().contains(armorType.getRegistryName())) amount++;
 		if (leggings.toString().contains(armorType.getRegistryName())) amount++;
@@ -39,10 +38,10 @@ public class CustomArmorItem extends ArmorItem {
 
 
 	@Override
-	public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
-		player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1000, 0));
+	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+		if(!level.isClientSide() && entity instanceof Player) {
 
-		if(!level.isClientSide()) {
+			Player player = (Player) entity;
 
 			int atlasCounter = getMechSuitAmount(ArmorTypes.ATLAS, player);
 			int legionCounter = getMechSuitAmount(ArmorTypes.LEGION, player);
@@ -50,30 +49,93 @@ public class CustomArmorItem extends ArmorItem {
 			int ogreCounter = getMechSuitAmount(ArmorTypes.OGRE, player);
 			int ionCounter = getMechSuitAmount(ArmorTypes.ION, player);
 
-			System.err.println("##############################" + atlasCounter);
+
 			//ATLAS
 			switch (atlasCounter) {
 				case 1:
-					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 0));
-
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 0, false, false, true));
+					break;
 				case 2:
-					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 0));
-					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 10, 0));
-
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 0, false, false, true));
+					break;
 				case 3:
-					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 0));
-					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 10, 1));
-
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 1, false, false, true));
+					break;
 				case 4:
-					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 0));
-					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 10, 1));
-					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 10, 0));
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 30, 0, false, false, true));
+					break;
+				default:
+					break;
+			}
 
+			//LEGION
+			switch (legionCounter) {
+				case 1:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 0, false, false, true));
+					break;
+				case 2:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 0, false, false, true));
+					break;
+				case 3:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 1, false, false, true));
+					break;
+				case 4:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 2, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 2, false, false, true));
+					break;
+				default:
+					break;
+			}
+
+			//STRYDER
+			switch (stryderCounter) {
+				case 1:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 0, false, false, true));
+					break;
+				case 2:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 0, false, false, true));
+					break;
+				case 3:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 1, false, false, true));
+					break;
+				case 4:
+					player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.JUMP, 30, 0, false, false, true));
+					break;
+				default:
+					break;
+			}
+
+			//OGRE
+			switch (ogreCounter) {
+				case 1:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 30, 0, false, false, true));
+					break;
+				case 2:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 30, 0, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 0, false, false, true));
+					break;
+				case 3:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 30, 1, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 1, false, false, true));
+					break;
+				case 4:
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 30, 2, false, false, true));
+					player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 1, false, false, true));
+					break;
 				default:
 					break;
 			}
 		}
 	}
-
 
 }
