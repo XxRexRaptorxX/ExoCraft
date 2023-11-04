@@ -24,6 +24,8 @@ public class Exocraft {
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        MinecraftForge.EVENT_BUS.register(this);
+
         Config.init();
         ModItems.init();
         ModBlocks.init();
