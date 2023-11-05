@@ -160,4 +160,16 @@ public class CustomArmorItem extends ArmorItem {
 		}
 	}
 
+
+	@Override
+	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+		return false;
+	}
+
+
+	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		return false;
+	}
+
 }

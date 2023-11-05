@@ -48,7 +48,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+    }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
     LEGION(References.MODID + ":legion", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
@@ -56,7 +56,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+    }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
     STRYDER(References.MODID + ":stryder", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
@@ -64,7 +64,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+    }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
     OGRE(References.MODID + ":ogre", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
@@ -72,7 +72,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+    }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
     ION(References.MODID + ":ion", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
@@ -80,7 +80,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
+    }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     });
 
