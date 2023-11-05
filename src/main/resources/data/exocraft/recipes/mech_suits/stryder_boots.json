@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "exocraft:unit_stryder"
+  },
+  "base": {
+    "item": "exocraft:energy_core"
+  },
+  "template": {
+    "item": "exocraft:reinforced_iron_boots"
+  },
+
+  "result": {
+    "item": "exocraft:stryder_boots"
+  }
+}

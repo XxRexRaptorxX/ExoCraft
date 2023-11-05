@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "exocraft:unit_atlas"
+  },
+  "base": {
+    "item": "exocraft:energy_core"
+  },
+  "template": {
+    "item": "exocraft:reinforced_iron_chestplate"
+  },
+
+  "result": {
+    "item": "exocraft:atlas_chestplate"
+  }
+}

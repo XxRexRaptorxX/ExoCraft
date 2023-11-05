@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "exocraft:unit_ogre"
+  },
+  "base": {
+    "item": "exocraft:energy_core"
+  },
+  "template": {
+    "item": "exocraft:reinforced_iron_helmet"
+  },
+
+  "result": {
+    "item": "exocraft:ogre_helmet"
+  }
+}

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
   
-    "#I#",
+    "#O#",
     "IXI",
     "#I#"
     
@@ -16,6 +16,9 @@
     },
     "I": {
       "tag": "forge:dusts/redstone"
+    },
+    "O": {
+      "tag": "forge:chips/redstone"
     }
   },
   
