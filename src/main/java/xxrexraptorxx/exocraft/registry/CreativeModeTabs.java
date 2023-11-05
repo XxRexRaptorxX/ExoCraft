@@ -21,6 +21,11 @@ public class CreativeModeTabs {
             .withTabsBefore(net.minecraft.world.item.CreativeModeTabs.SPAWN_EGGS)
             .displayItems((params, output) -> {
 
+                output.accept(ModItems.REINFORCED_IRON_HELMET.get());
+                output.accept(ModItems.REINFORCED_IRON_CHESTPLATE.get());
+                output.accept(ModItems.REINFORCED_IRON_LEGGINGS.get());
+                output.accept(ModItems.REINFORCED_IRON_BOOTS.get());
+
                 output.accept(ModItems.ATLAS_HELMET.get());
                 output.accept(ModItems.ATLAS_CHESTPLATE.get());
                 output.accept(ModItems.ATLAS_LEGGINGS.get());

@@ -35,6 +35,14 @@ public enum ArmorMaterials implements ArmorMaterial {
      return Ingredient.of(Items.NETHERITE_INGOT);
      });
     **/
+    REINFORCED_IRON(References.MODID + ":reinforced_iron", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+        p_266650_.put(ArmorItem.Type.BOOTS, 3);
+        p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266650_.put(ArmorItem.Type.HELMET, 3);
+    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0, () -> {
+        return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
+    }),
     ATLAS(References.MODID + ":atlas", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);

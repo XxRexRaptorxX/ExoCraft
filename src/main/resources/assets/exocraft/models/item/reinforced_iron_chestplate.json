@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "exocraft:item/reinforced_iron_chestplate"
+    }
+}

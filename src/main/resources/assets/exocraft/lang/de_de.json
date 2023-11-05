@@ -7,6 +7,10 @@
     "block.exocraft.lava_crystal_block": "Lava Kristall Block",
     "block.exocraft.lava_crystal_ore": "Lava Kristall Erz",
 
+    "item.exocraft.reinforced_iron_helmet": "Verstärkter Eisen Helm",
+    "item.exocraft.reinforced_iron_chestplate": "Verstärkter Eisen Brustpanzer",
+    "item.exocraft.reinforced_iron_leggings": "Verstärkter Eisen Fußpanzer",
+    "item.exocraft.reinforced_iron_boots": "Verstärkte Eisen Stiefel",
     "item.exocraft.atlas_helmet": "Atlas Exosuit Helm",
     "item.exocraft.atlas_chestplate": "Atlas Exosuit Brustpanzer",
     "item.exocraft.atlas_leggings": "Atlas Exosuit Fußpanzer",

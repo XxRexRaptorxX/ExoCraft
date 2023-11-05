@@ -7,6 +7,10 @@
     "block.exocraft.lava_crystal_block": "Lava Crystal Block",
     "block.exocraft.lava_crystal_ore": "Lava Crystal Ore",
 
+    "item.exocraft.reinforced_iron_helmet": "Reinforced Iron Exosuit Helmet",
+    "item.exocraft.reinforced_iron_chestplate": "Reinforced Iron Exosuit Chestplate",
+    "item.exocraft.reinforced_iron_leggings": "Reinforced Iron Exosuit Leggings",
+    "item.exocraft.reinforced_iron_boots": "Reinforced Iron Exosuit Boots",
     "item.exocraft.atlas_helmet": "Atlas Exosuit Helmet",
     "item.exocraft.atlas_chestplate": "Atlas Exosuit Chestplate",
     "item.exocraft.atlas_leggings": "Atlas Exosuit Leggings",

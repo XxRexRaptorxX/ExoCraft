@@ -23,6 +23,11 @@ public class ModItems {
         ITEMS.register(bus);
     }
 
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_HELMET = ITEMS.register("reinforced_iron_helmet", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_LEGGINGS = ITEMS.register("reinforced_iron_leggings", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_CHESTPLATE = ITEMS.register("reinforced_iron_chestplate", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_BOOTS = ITEMS.register("reinforced_iron_boots", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.BOOTS, new Item.Properties()));
+
     public static final RegistryObject<CustomArmorItem> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<CustomArmorItem> ATLAS_LEGGINGS = ITEMS.register("atlas_leggings", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<CustomArmorItem> ATLAS_CHESTPLATE = ITEMS.register("atlas_chestplate", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
