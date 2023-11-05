@@ -1,6 +1,8 @@
 {
     "itemGroup.exocraft_tab": "ExoCraft",
 
+    "container.upgrade": "Smithing",
+
     "block.exocraft.fabricator": "Fabricator",
     "block.exocraft.lava_crystal_block": "Lava Crystal Block",
     "block.exocraft.lava_crystal_ore": "Lava Crystal Ore",

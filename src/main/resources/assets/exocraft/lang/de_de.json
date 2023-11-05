@@ -1,6 +1,8 @@
 ﻿{
     "itemGroup.exocraft_tab": "ExoCraft",
 
+    "container.upgrade": "Schmieden",
+
     "block.exocraft.fabricator": "Fabricator",
     "block.exocraft.lava_crystal_block": "Lava Kristall Block",
     "block.exocraft.lava_crystal_ore": "Lava Kristall Erz",
