@@ -12,7 +12,7 @@ public class LavaCrystalBlock extends Block {
 		super(Properties.of()
 				.requiresCorrectToolForDrops()
 				.strength(4.0F, 8.0F)
-				.sound(SoundType.AMETHYST)
+				.sound(SoundType.METAL)
 				.mapColor(MapColor.COLOR_RED)
 				.instrument(NoteBlockInstrument.BIT)
 		);
