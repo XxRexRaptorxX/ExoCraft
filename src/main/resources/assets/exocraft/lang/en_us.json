@@ -1,6 +1,8 @@
 {
     "itemGroup.exocraft_tab": "ExoCraft",
 
+    "message.exocraft.units_jei_desc": "Units can be found in End City, Ancient City and Bastion Chests.",
+
     "container.upgrade": "Smithing",
 
     "block.exocraft.fabricator": "Fabricator",

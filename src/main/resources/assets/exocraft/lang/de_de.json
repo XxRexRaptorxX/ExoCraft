@@ -1,6 +1,8 @@
 ﻿{
     "itemGroup.exocraft_tab": "ExoCraft",
 
+    "message.exocraft.units_jei_desc": "Einheiten können in Endsiedlungen, Antiken Stätten und Bastion Kisten gefunden werden.",
+
     "container.upgrade": "Schmieden",
 
     "block.exocraft.fabricator": "Fabricator",
