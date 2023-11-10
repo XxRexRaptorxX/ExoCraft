@@ -1,0 +1,16 @@
+[
+{
+  "modid": "exocraft",
+  "name": "ExoCraft",
+  "description": "This mod adds new cool exo suits!",
+  "version": "1.1.0",
+  "mcversion": "1.12.0,1.12.2",
+  "url": "https://minecraft.curseforge.com/projects/exo-craft",
+  "updateUrl": "",
+  "authorList": ["XxRexRaptorxX (RexRaptor)"],
+  "credits": "XxRexRaptorxX",
+  "logoFile": "assets/exocraft/textures/logo/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

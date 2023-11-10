@@ -1,12 +1,12 @@
 {
-    "parent": "minecraft:block/cube",
+    "parent": "block/cube",
     "textures": {
-        "particle": "exocraft:block/fabricator_front",
-        "up": "exocraft:block/fabricator_top",
-        "down": "exocraft:block/fabricator_bottom",
-        "north": "exocraft:block/fabricator_front",
-        "east": "exocraft:block/fabricator_side",
-        "west": "exocraft:block/fabricator_side",
-        "south": "exocraft:block/fabricator_front"
+        "particle": "exocraft:blocks/fabricator_front",
+        "up": "exocraft:blocks/fabricator_top",
+        "down": "exocraft:blocks/fabricator_bottom",
+        "north": "exocraft:blocks/fabricator_front",
+        "east": "exocraft:blocks/fabricator_side",
+        "west": "exocraft:blocks/fabricator_side",
+        "south": "exocraft:blocks/fabricator_front"
     }
 }

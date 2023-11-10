@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "exocraft:block/fabricator" }
+        "normal": { "model": "exocraft:fabricator" }
     }
 }

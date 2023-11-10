@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "exocraft:item/ogre_chestplate"
+        "layer0": "exocraft:items/ogre_chestplate"
     }
 }

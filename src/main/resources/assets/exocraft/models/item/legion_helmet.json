@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "exocraft:item/legion_helmet"
+        "layer0": "exocraft:items/legion_helmet"
     }
 }

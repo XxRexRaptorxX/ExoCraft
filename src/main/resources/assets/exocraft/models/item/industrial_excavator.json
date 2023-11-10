@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/handheld",
+    "parent": "item/handheld",
     "textures": {
-        "layer0": "exocraft:item/industrial_excavator"
+        "layer0": "exocraft:items/industrial_excavator"
     }
 }

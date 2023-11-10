@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "exocraft:item/stryder_chestplate"
+        "layer0": "exocraft:items/stryder_chestplate"
     }
 }

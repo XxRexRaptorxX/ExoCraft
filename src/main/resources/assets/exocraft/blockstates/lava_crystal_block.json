@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "exocraft:block/lava_crystal_block" }
+        "normal": { "model": "exocraft:lava_crystal_block" }
     }
 }

@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "exocraft:item/machine_case"
+        "layer0": "exocraft:items/machine_case"
     }
 }

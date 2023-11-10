@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "exocraft:item/ion_boots"
+        "layer0": "exocraft:items/ion_boots"
     }
 }
