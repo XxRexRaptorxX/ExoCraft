@@ -35,7 +35,7 @@ public enum ArmorMaterials implements ArmorMaterial {
      return Ingredient.of(Items.NETHERITE_INGOT);
      });
     **/
-    REINFORCED_IRON(References.MODID + ":reinforced_iron", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    REINFORCED_IRON(References.MODID + ":reinforced_iron", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -43,7 +43,7 @@ public enum ArmorMaterials implements ArmorMaterial {
     }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
-    ATLAS(References.MODID + ":atlas", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    ATLAS(References.MODID + ":atlas", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -51,7 +51,7 @@ public enum ArmorMaterials implements ArmorMaterial {
     }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
-    LEGION(References.MODID + ":legion", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    LEGION(References.MODID + ":legion", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -59,7 +59,7 @@ public enum ArmorMaterials implements ArmorMaterial {
     }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
-    STRYDER(References.MODID + ":stryder", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    STRYDER(References.MODID + ":stryder", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -67,7 +67,7 @@ public enum ArmorMaterials implements ArmorMaterial {
     }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
-    OGRE(References.MODID + ":ogre", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    OGRE(References.MODID + ":ogre", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -75,7 +75,7 @@ public enum ArmorMaterials implements ArmorMaterial {
     }), 0, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 5, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
-    ION(References.MODID + ":ion", 3, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
+    ION(References.MODID + ":ion", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
         p_266650_.put(ArmorItem.Type.BOOTS, 3);
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
