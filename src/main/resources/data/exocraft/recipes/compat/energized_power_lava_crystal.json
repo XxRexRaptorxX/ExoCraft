@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "energizedpower"
+    }
+  ],
+  "type": "energizedpower:crystal_growth_chamber",
+  "ingredient": {
+    "tag": "forge:gems/lava_crystal"
+  },
+  "ticks": 16000,
+  "output": {
+    "output": {
+      "item": "exocraft:lava_crystal"
+    },
+    "percentages": [0.5, 0.25, 0.125]
+  }
+}

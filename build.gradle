@@ -175,7 +175,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_version}")
     //other mods for testing
     //runtimeOnly fg.deobf("curse.maven:alltheores-405593:${ato_version}")
-    //runtimeOnly fg.deobf("curse.maven:energized-power-782147:${energized_power_version}")
+    runtimeOnly fg.deobf("curse.maven:energized-power-782147:${energized_power_version}")
     //runtimeOnly fg.deobf("curse.maven:voliminousenergy-416704:${voluminous_energy_version}")
 
 }
