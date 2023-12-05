@@ -16,6 +16,9 @@ public class Config {
     public static ForgeConfigSpec.BooleanValue UPDATE_CHECKER;
     public static ForgeConfigSpec.BooleanValue PATREON_REWARDS;
 
+    public static ForgeConfigSpec.BooleanValue IS_TABLE_ENCHANTABLE;
+    public static ForgeConfigSpec.BooleanValue IS_BOOK_ENCHANTABLE;
+
 
     public static void init() {
         initClient();
@@ -42,6 +45,8 @@ public class Config {
 
         builder.comment("General").push(CATEGORY_GENERAL);
         PATREON_REWARDS = builder.comment("Enables ingame rewards on first spawn for Patreons").define("patreon_rewards", true);
+        IS_TABLE_ENCHANTABLE = builder.comment("Should mech suits be enchantable at the enchantment table?").define("is_table_enchantable", false);
+        IS_BOOK_ENCHANTABLE = builder.comment("Should mech suits be enchantable with enchantment books?").define("is_book_enchantable", false);
         builder.pop();
 
         SERVER_CONFIG = builder.build();

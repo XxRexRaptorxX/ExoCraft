@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import xxrexraptorxx.exocraft.utils.ArmorTypes;
+import xxrexraptorxx.exocraft.utils.Config;
 
 public class CustomArmorItem extends ArmorItem {
 
@@ -163,13 +164,13 @@ public class CustomArmorItem extends ArmorItem {
 
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
-		return false;
+		return Config.IS_BOOK_ENCHANTABLE.get();
 	}
 
 
 	@Override
 	public boolean isEnchantable(ItemStack stack) {
-		return false;
+		return Config.IS_TABLE_ENCHANTABLE.get();
 	}
 
 }
