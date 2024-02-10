@@ -36,6 +36,7 @@ public class JEIIntegration implements IModPlugin {
         units.add(new ItemStack(ModItems.OGRE_UNIT.get()));
 
         registry.addIngredientInfo(units, VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.units_jei_desc"));
+        registry.addIngredientInfo(new ItemStack(ModItems.OLD_UNIT.get()), VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.old_unit_jei_desc"));
 
     }
 }
