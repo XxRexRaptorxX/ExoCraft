@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:circuits/redstone",
+    {
+      "id": "energizedpower:basic_circuit",
+      "required": false
+    },
+    {
+      "id": "mekanism:basic_control_circuit",
+      "required": false
+    }
+  ]
+}

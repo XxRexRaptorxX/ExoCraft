@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+  
+    " # ",
+    "#X#",
+    " # "
+    
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:circuits/basic"
+    },
+    "#": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  
+  
+  "result": {
+    "item": "exocraft:unit_empty"
+  }
+}

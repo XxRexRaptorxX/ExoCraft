@@ -56,6 +56,12 @@ public class CreativeModeTabs {
                 output.accept(ModItems.REDSTONE_CIRCUIT.get());
                 output.accept(ModItems.REINFORCED_IRON_PLATE.get());
 
+                output.accept(ModItems.ATLAS_MATRIX.get());
+                output.accept(ModItems.OGRE_MATRIX.get());
+                output.accept(ModItems.LEGION_MATRIX.get());
+                output.accept(ModItems.STRYDER_MATRIX.get());
+                output.accept(ModItems.ION_MATRIX.get());
+
                 output.accept(ModItems.EMPTY_UNIT.get());
                 output.accept(ModItems.ATLAS_UNIT.get());
                 output.accept(ModItems.OGRE_UNIT.get());

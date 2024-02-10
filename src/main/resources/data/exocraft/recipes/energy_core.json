@@ -3,7 +3,7 @@
   "category": "misc",
   "pattern": [
   
-    "#O#",
+    "#I#",
     "IXI",
     "#I#"
     
@@ -17,9 +17,6 @@
     },
     "I": {
       "tag": "forge:dusts/redstone"
-    },
-    "O": {
-      "tag": "forge:chips/redstone"
     }
   },
   

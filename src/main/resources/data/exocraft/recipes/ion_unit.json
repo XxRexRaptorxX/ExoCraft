@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+
+    {
+      "item": "exocraft:unit_empty"
+    },
+    {
+      "item": "exocraft:matrix_ion"
+    }
+  ],
+
+  "result": {
+    "item": "exocraft:unit_ion"
+  }
+}

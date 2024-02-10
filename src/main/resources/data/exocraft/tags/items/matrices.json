@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "exocraft:matrix_ogre",
+    "exocraft:matrix_atlas",
+    "exocraft:matrix_stryder",
+    "exocraft:matrix_ion",
+    "exocraft:matrix_legion"
+  ]
+}

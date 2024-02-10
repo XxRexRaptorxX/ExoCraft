@@ -35,10 +35,12 @@
     "item.exocraft.stryder_chestplate": "Stryder Exosuit Brustpanzer",
     "item.exocraft.stryder_leggings": "Stryder Exosuit Fußpanzer",
     "item.exocraft.stryder_boots": "Stryder Exosuit Stiefel",
+
     "item.exocraft.energy_core": "Energie Kern",
     "item.exocraft.lava_crystal": "Lava Kristall",
     "item.exocraft.redstone_circuit": "Redstone Schaltung",
     "item.exocraft.reinforced_iron_plate": "Verstärkte Eisen Platte",
+
     "item.exocraft.unit_atlas": "Atlas Einheit",
     "item.exocraft.unit_ogre": "Ogre Einheit",
     "item.exocraft.unit_legion": "Legion Einheit",
@@ -46,6 +48,13 @@
     "item.exocraft.unit_ion": "Ion Einheit",
     "item.exocraft.unit_empty": "Leere Einheit",
     "item.exocraft.unit_old": "Alte Einheit",
+
+    "item.exocraft.matrix_atlas": "Atlas Matrix",
+    "item.exocraft.matrix_ogre": "Ogre Matrix",
+    "item.exocraft.matrix_legion": "Legion Matrix",
+    "item.exocraft.matrix_stryder": "Stryder Matrix",
+    "item.exocraft.matrix_ion": "Ion Matrix",
+
     "item.exocraft.industrial_excavator": "Industrieller Schaufler",
     "item.exocraft.industrial_miner": "Industrieller Graber",
     "item.exocraft.industrial_multi_tool": "Industrielles Allzweck Werkzeug",
