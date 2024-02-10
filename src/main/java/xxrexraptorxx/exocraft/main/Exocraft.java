@@ -21,9 +21,6 @@ public class Exocraft {
     public static final Logger LOGGER = LogManager.getLogger();
 
     public Exocraft() {
-        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         MinecraftForge.EVENT_BUS.register(this);
 
         Config.init();
