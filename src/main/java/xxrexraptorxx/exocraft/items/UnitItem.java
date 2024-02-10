@@ -3,8 +3,6 @@ package xxrexraptorxx.exocraft.items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.crafting.RecipeType;
-import org.jetbrains.annotations.Nullable;
 import xxrexraptorxx.exocraft.registry.ModItems;
 
 public class UnitItem extends Item {
@@ -19,7 +17,7 @@ public class UnitItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack stack) {
-        if (this == ModItems.EMPTY_UNIT.get()) {
+        if (this == ModItems.EMPTY_UNIT.get() || this == ModItems.OLD_UNIT.get()) {
             return false;
         } else {
             return true;
