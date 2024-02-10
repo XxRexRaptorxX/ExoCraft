@@ -55,11 +55,14 @@ public class CreativeModeTabs {
                 output.accept(ModItems.LAVA_CRYSTAL.get());
                 output.accept(ModItems.REDSTONE_CIRCUIT.get());
                 output.accept(ModItems.REINFORCED_IRON_PLATE.get());
+
+                output.accept(ModItems.EMPTY_UNIT.get());
                 output.accept(ModItems.ATLAS_UNIT.get());
                 output.accept(ModItems.OGRE_UNIT.get());
                 output.accept(ModItems.LEGION_UNIT.get());
                 output.accept(ModItems.STRYDER_UNIT.get());
                 output.accept(ModItems.ION_UNIT.get());
+                output.accept(ModItems.OLD_UNIT.get());
 
                 output.accept(ModBlocks.LAVA_CRYSTAL_ORE.get());
                 output.accept(ModBlocks.LAVA_CRYSTAL_BLOCK.get());

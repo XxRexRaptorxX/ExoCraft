@@ -2,6 +2,7 @@
     "itemGroup.exocraft_tab": "ExoCraft",
 
     "message.exocraft.units_jei_desc": "Units can be found in End City, Ancient City and Bastion Chests.",
+    "message.exocraft.old_unit_desc": "Right click to clean the unit.",
 
     "container.upgrade": "Smithing",
 
