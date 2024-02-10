@@ -57,9 +57,13 @@ public class ModItems {
     public static final RegistryObject<BasicItem> LAVA_CRYSTAL = ITEMS.register("lava_crystal", BasicItem::new);
     public static final RegistryObject<BasicItem> REDSTONE_CIRCUIT = ITEMS.register("redstone_circuit", BasicItem::new);
     public static final RegistryObject<BasicItem> REINFORCED_IRON_PLATE = ITEMS.register("reinforced_iron_plate", BasicItem::new);
+
+    public static final RegistryObject<UnitItem> EMPTY_UNIT = ITEMS.register("unit_empty", UnitItem::new);
     public static final RegistryObject<UnitItem> ATLAS_UNIT = ITEMS.register("unit_atlas", UnitItem::new);
     public static final RegistryObject<UnitItem> OGRE_UNIT = ITEMS.register("unit_ogre", UnitItem::new);
     public static final RegistryObject<UnitItem> LEGION_UNIT = ITEMS.register("unit_legion", UnitItem::new);
     public static final RegistryObject<UnitItem> STRYDER_UNIT = ITEMS.register("unit_stryder", UnitItem::new);
     public static final RegistryObject<UnitItem> ION_UNIT = ITEMS.register("unit_ion", UnitItem::new);
+    public static final RegistryObject<UnitItem> OLD_UNIT = ITEMS.register("unit_old", UnitItem::new);
+
 }

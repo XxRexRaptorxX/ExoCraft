@@ -19,6 +19,10 @@ public class UnitItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack stack) {
-        return true;
+        if (this == ModItems.EMPTY_UNIT.get()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

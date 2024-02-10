@@ -5,6 +5,8 @@
     "exocraft:unit_atlas",
     "exocraft:unit_stryder",
     "exocraft:unit_ion",
-    "exocraft:unit_legion"
+    "exocraft:unit_legion",
+    "exocraft:unit_empty",
+    "exocraft:unit_old"
   ]
 }
