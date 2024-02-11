@@ -35,3 +35,11 @@ versionRange="${mc_version_range}"
 ordering="NONE"
 side="BOTH"
 
+[[dependencies.${mod_id}]]
+modId="energizedpower"
+mandatory=false
+type="optional"
+reason="Makes it possible to produce your own units with the new machines."
+versionRange="1.20.0"
+ordering="NONE"
+side="BOTH"
