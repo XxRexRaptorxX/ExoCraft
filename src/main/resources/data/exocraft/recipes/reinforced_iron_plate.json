@@ -1,13 +1,10 @@
 {
-  "type": "minecraft:smithing_transform",
+  "type": "minecraft:smithing",
   "addition": {
-    "tag": "forge:ingots/iron"
+    "tag": "forge:gems/diamond"
   },
   "base": {
     "tag": "forge:ingots/iron"
-  },
-  "template": {
-    "tag": "forge:gems/diamond"
   },
 
   "result": {

@@ -4,11 +4,14 @@
   "key": {
     "X": {
       "item": "exocraft:reinforced_iron_plate"
+    },
+    "O": {
+      "item": "exocraft:energy_core"
     }
   },
   "pattern": [
     "X X",
-    "XXX",
+    "XOX",
     "XXX"
   ],
   "result": {

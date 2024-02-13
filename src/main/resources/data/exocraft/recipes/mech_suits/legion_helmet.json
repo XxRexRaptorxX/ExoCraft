@@ -1,12 +1,10 @@
 {
-  "type": "minecraft:smithing_transform",
+  "type": "minecraft:smithing",
   "addition": {
     "item": "exocraft:unit_legion"
   },
+
   "base": {
-    "item": "exocraft:energy_core"
-  },
-  "template": {
     "item": "exocraft:reinforced_iron_helmet"
   },
 
