@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_nether",
-  "features": "exocraft:lava_crystal_gen",
+  "features": "exocraft:lava_crystal_placed",
   "step": "underground_ores"
 }

@@ -1,6 +1,6 @@
 package xxrexraptorxx.exocraft.registry;
 
-import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -23,35 +23,35 @@ public class ModItems {
         ITEMS.register(bus);
     }
 
-    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_HELMET = ITEMS.register("reinforced_iron_helmet", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_LEGGINGS = ITEMS.register("reinforced_iron_leggings", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_CHESTPLATE = ITEMS.register("reinforced_iron_chestplate", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_BOOTS = ITEMS.register("reinforced_iron_boots", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_HELMET = ITEMS.register("reinforced_iron_helmet", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_LEGGINGS = ITEMS.register("reinforced_iron_leggings", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_CHESTPLATE = ITEMS.register("reinforced_iron_chestplate", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> REINFORCED_IRON_BOOTS = ITEMS.register("reinforced_iron_boots", () -> new CustomArmorItem(ArmorMaterials.REINFORCED_IRON, EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
 
-    public static final RegistryObject<CustomArmorItem> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> ATLAS_LEGGINGS = ITEMS.register("atlas_leggings", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> ATLAS_CHESTPLATE = ITEMS.register("atlas_chestplate", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> ATLAS_BOOTS = ITEMS.register("atlas_boots", () -> new CustomArmorItem(ArmorMaterials.ATLAS, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new CustomArmorItem(ArmorMaterials.ATLAS, EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> ATLAS_LEGGINGS = ITEMS.register("atlas_leggings", () -> new CustomArmorItem(ArmorMaterials.ATLAS, EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> ATLAS_CHESTPLATE = ITEMS.register("atlas_chestplate", () -> new CustomArmorItem(ArmorMaterials.ATLAS, EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> ATLAS_BOOTS = ITEMS.register("atlas_boots", () -> new CustomArmorItem(ArmorMaterials.ATLAS, EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
 
-    public static final RegistryObject<CustomArmorItem> LEGION_HELMET = ITEMS.register("legion_helmet", () -> new CustomArmorItem(ArmorMaterials.LEGION, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> LEGION_LEGGINGS = ITEMS.register("legion_leggings", () -> new CustomArmorItem(ArmorMaterials.LEGION, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> LEGION_CHESTPLATE = ITEMS.register("legion_chestplate", () -> new CustomArmorItem(ArmorMaterials.LEGION, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> LEGION_BOOTS = ITEMS.register("legion_boots", () -> new CustomArmorItem(ArmorMaterials.LEGION, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> LEGION_HELMET = ITEMS.register("legion_helmet", () -> new CustomArmorItem(ArmorMaterials.LEGION, EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> LEGION_LEGGINGS = ITEMS.register("legion_leggings", () -> new CustomArmorItem(ArmorMaterials.LEGION, EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> LEGION_CHESTPLATE = ITEMS.register("legion_chestplate", () -> new CustomArmorItem(ArmorMaterials.LEGION, EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> LEGION_BOOTS = ITEMS.register("legion_boots", () -> new CustomArmorItem(ArmorMaterials.LEGION, EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
 
-    public static final RegistryObject<CustomArmorItem> STRYDER_HELMET = ITEMS.register("stryder_helmet", () -> new CustomArmorItem(ArmorMaterials.STRYDER, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> STRYDER_LEGGINGS = ITEMS.register("stryder_leggings", () -> new CustomArmorItem(ArmorMaterials.STRYDER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> STRYDER_CHESTPLATE = ITEMS.register("stryder_chestplate", () -> new CustomArmorItem(ArmorMaterials.STRYDER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> STRYDER_BOOTS = ITEMS.register("stryder_boots", () -> new CustomArmorItem(ArmorMaterials.STRYDER, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> STRYDER_HELMET = ITEMS.register("stryder_helmet", () -> new CustomArmorItem(ArmorMaterials.STRYDER, EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> STRYDER_LEGGINGS = ITEMS.register("stryder_leggings", () -> new CustomArmorItem(ArmorMaterials.STRYDER, EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> STRYDER_CHESTPLATE = ITEMS.register("stryder_chestplate", () -> new CustomArmorItem(ArmorMaterials.STRYDER, EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> STRYDER_BOOTS = ITEMS.register("stryder_boots", () -> new CustomArmorItem(ArmorMaterials.STRYDER, EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
 
-    public static final RegistryObject<CustomArmorItem> OGRE_HELMET = ITEMS.register("ogre_helmet", () -> new CustomArmorItem(ArmorMaterials.OGRE, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> OGRE_LEGGINGS = ITEMS.register("ogre_leggings", () -> new CustomArmorItem(ArmorMaterials.OGRE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> OGRE_CHESTPLATE = ITEMS.register("ogre_chestplate", () -> new CustomArmorItem(ArmorMaterials.OGRE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> OGRE_BOOTS = ITEMS.register("ogre_boots", () -> new CustomArmorItem(ArmorMaterials.OGRE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> OGRE_HELMET = ITEMS.register("ogre_helmet", () -> new CustomArmorItem(ArmorMaterials.OGRE, EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> OGRE_LEGGINGS = ITEMS.register("ogre_leggings", () -> new CustomArmorItem(ArmorMaterials.OGRE, EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> OGRE_CHESTPLATE = ITEMS.register("ogre_chestplate", () -> new CustomArmorItem(ArmorMaterials.OGRE, EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> OGRE_BOOTS = ITEMS.register("ogre_boots", () -> new CustomArmorItem(ArmorMaterials.OGRE, EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
 
-    public static final RegistryObject<CustomArmorItem> ION_HELMET = ITEMS.register("ion_helmet", () -> new CustomArmorItem(ArmorMaterials.ION, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> ION_LEGGINGS = ITEMS.register("ion_leggings", () -> new CustomArmorItem(ArmorMaterials.ION, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> ION_CHESTPLATE = ITEMS.register("ion_chestplate", () -> new CustomArmorItem(ArmorMaterials.ION, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<CustomArmorItem> ION_BOOTS = ITEMS.register("ion_boots", () -> new CustomArmorItem(ArmorMaterials.ION, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<CustomArmorItem> ION_HELMET = ITEMS.register("ion_helmet", () -> new CustomArmorItem(ArmorMaterials.ION, EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> ION_LEGGINGS = ITEMS.register("ion_leggings", () -> new CustomArmorItem(ArmorMaterials.ION, EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> ION_CHESTPLATE = ITEMS.register("ion_chestplate", () -> new CustomArmorItem(ArmorMaterials.ION, EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
+    public static final RegistryObject<CustomArmorItem> ION_BOOTS = ITEMS.register("ion_boots", () -> new CustomArmorItem(ArmorMaterials.ION, EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTabs.MOD_TAB)));
 
     public static final RegistryObject<BasicItem> ENERGY_CORE = ITEMS.register("energy_core", BasicItem::new);
     public static final RegistryObject<BasicItem> LAVA_CRYSTAL = ITEMS.register("lava_crystal", BasicItem::new);

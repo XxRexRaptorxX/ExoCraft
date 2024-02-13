@@ -3,6 +3,7 @@ package xxrexraptorxx.exocraft.items;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -14,8 +15,8 @@ import xxrexraptorxx.exocraft.utils.Config;
 
 public class CustomArmorItem extends ArmorItem {
 
-	public CustomArmorItem(ArmorMaterial material, Type type, Properties properties) {
-		super(material, type, properties);
+	public CustomArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties properties) {
+		super(material, slot, properties);
 	}
 
 	/**

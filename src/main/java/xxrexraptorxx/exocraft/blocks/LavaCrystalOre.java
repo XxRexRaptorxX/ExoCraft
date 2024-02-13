@@ -6,8 +6,8 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,12 +15,11 @@ import java.util.concurrent.ThreadLocalRandom;
 public class LavaCrystalOre extends Block {
 
 	public LavaCrystalOre() {
-		super(Properties.of()
+		super(Properties.of(Material.STONE)
 				.requiresCorrectToolForDrops()
 				.strength(3.0F, 5.0F)
 				.sound(SoundType.STONE)
-				.mapColor(MapColor.COLOR_RED)
-				.instrument(NoteBlockInstrument.BASEDRUM)
+				.color(MaterialColor.NETHER)
 		);
 
 	}

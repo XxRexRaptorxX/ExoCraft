@@ -1,7 +1,5 @@
 package xxrexraptorxx.exocraft.utils;
 
-import xxrexraptorxx.exocraft.main.References;
-
 public enum ArmorTypes {
 
     ATLAS ("atlas"),

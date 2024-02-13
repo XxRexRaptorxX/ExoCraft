@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -14,6 +13,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import xxrexraptorxx.exocraft.registry.CreativeModeTabs;
 import xxrexraptorxx.exocraft.registry.ModItems;
 
 import java.util.List;
@@ -25,6 +25,7 @@ public class UnitItem extends Item {
         super(new Properties()
                 .stacksTo(16)
                 .rarity(Rarity.RARE)
+                .tab(CreativeModeTabs.MOD_TAB)
         );
     }
 
@@ -51,7 +52,7 @@ public class UnitItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (this == ModItems.OLD_UNIT.get()) {
 
-            level.playSound(player, player.getOnPos(), SoundEvents.BRUSH_GENERIC, SoundSource.PLAYERS, 1.0F, 1.0F);
+            level.playSound(player, player.getOnPos(), SoundEvents.SOUL_SAND_FALL, SoundSource.PLAYERS, 1.0F, 1.0F);
             player.getItemInHand(hand).shrink(1);
 
             switch (new Random().nextInt(5)) {

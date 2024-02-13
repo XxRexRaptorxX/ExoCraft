@@ -7,10 +7,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import xxrexraptorxx.exocraft.registry.CreativeModeTabs;
 
 
 public class LavaCrystalBlock extends Block {
@@ -19,12 +20,11 @@ public class LavaCrystalBlock extends Block {
 
 
 	public LavaCrystalBlock() {
-		super(Properties.of()
+		super(Properties.of(Material.METAL)
 				.requiresCorrectToolForDrops()
 				.strength(4.0F, 8.0F)
 				.sound(SoundType.METAL)
-				.mapColor(MapColor.COLOR_RED)
-				.instrument(NoteBlockInstrument.BIT)
+				.color(MaterialColor.COLOR_RED)
 		);
 	}
 
