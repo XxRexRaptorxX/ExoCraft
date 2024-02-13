@@ -40,7 +40,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         p_266650_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266650_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266650_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0, () -> {
+    }), 10, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0, () -> {
         return Ingredient.of(ModItems.REINFORCED_IRON_PLATE.get());
     }),
     ATLAS(References.MODID + ":atlas", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266650_) -> {
