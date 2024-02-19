@@ -1,5 +1,6 @@
 package xxrexraptorxx.exocraft.main;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -8,7 +9,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
-import xxrexraptorxx.exocraft.registry.CreativeModeTabs;
+import xxrexraptorxx.exocraft.items.MechArmorItem;
+import xxrexraptorxx.exocraft.registry.CreativeTabs;
 import xxrexraptorxx.exocraft.registry.ModBlocks;
 import xxrexraptorxx.exocraft.registry.ModItems;
 import xxrexraptorxx.exocraft.utils.Config;
@@ -32,7 +34,7 @@ public class Exocraft {
         Config.init();
         ModItems.init();
         ModBlocks.init();
-        CreativeModeTabs.init();
+        CreativeTabs.init();
     }
 
 
