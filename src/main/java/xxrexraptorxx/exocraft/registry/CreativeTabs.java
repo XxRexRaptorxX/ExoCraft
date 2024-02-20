@@ -57,7 +57,7 @@ public class CreativeTabs {
                 output.acceptAll(ModItems.ION_LEGGINGS.get().getItemVariantList());
                 output.acceptAll(ModItems.ION_BOOTS.get().getItemVariantList());
 
-                output.accept(ModItems.ENERGY_CORE.get());
+                output.acceptAll(ModItems.ENERGY_CORE.get().getItemVariantList());
                 output.accept(ModItems.LAVA_CRYSTAL.get());
                 output.accept(ModItems.REDSTONE_CIRCUIT.get());
                 output.accept(ModItems.REINFORCED_IRON_PLATE.get());

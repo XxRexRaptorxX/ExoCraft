@@ -28,8 +28,8 @@ import java.util.List;
 
 public class MechArmorItem extends ArmorItem {
 
-	private static int maxEnergy = 50000;
-	private static int maxTransfer = 1500;
+	private static final int maxEnergy = 50000;
+	private static final int maxTransfer = 1500;
 
 
 	public MechArmorItem(ArmorMaterial material, Type type, Properties properties) {
