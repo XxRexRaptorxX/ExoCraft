@@ -17,6 +17,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
+import xxrexraptorxx.exocraft.utils.ArmorHelper;
 import xxrexraptorxx.exocraft.utils.ArmorTypes;
 import xxrexraptorxx.exocraft.utils.Config;
 import xxrexraptorxx.exocraft.utils.ModEnergyStorage;
@@ -182,6 +183,24 @@ public class MechArmorItem extends ArmorItem {
 
 
 	@Override
+	public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> list, TooltipFlag flag) {
+		if (Config.USE_ENERGY.get()) {
+			if (ForgeCapabilities.ENERGY == null) return; // sanity check
+			stack.getCapability(ForgeCapabilities.ENERGY).ifPresent(e -> {
+				list.add(Component.translatable("message.exocraft.energy").withStyle(ChatFormatting.GRAY)
+						.append(": " + ModEnergyStorage.formatEnergyValue(e.getEnergyStored()) + " / " + ModEnergyStorage.formatEnergyValue(e.getMaxEnergyStored())));
+			});
+
+			if (Config.USE_DURABILITY.get()) {
+				Integer damagePercentage = ArmorHelper.getPercentageValue(this.getMaxDamage(stack), this.getDamage(stack));
+
+				list.add(Component.translatable("message.exocraft.durability").withStyle(ChatFormatting.GRAY).append(Component.literal(": " + ArmorHelper.getDamageColor(damagePercentage) + String.valueOf(damagePercentage) + "%")));
+			}
+		}
+	}
+
+
+	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
 		return Config.IS_BOOK_ENCHANTABLE.get();
 	}
@@ -223,29 +242,6 @@ public class MechArmorItem extends ArmorItem {
 	}
 
 
-	@Override
-	public void appendHoverText(ItemStack itemStack, @Nullable Level world, List<Component> list, TooltipFlag flag) {
-		if (Config.USE_ENERGY.get()) {
-			if (ForgeCapabilities.ENERGY == null) return; // sanity check
-			itemStack.getCapability(ForgeCapabilities.ENERGY).ifPresent(e -> {
-				list.add(Component.translatable("message.exocraft.energy").withStyle(ChatFormatting.GRAY)
-						.append(": " + ModEnergyStorage.formatEnergyValue(e.getEnergyStored()) + " / " + ModEnergyStorage.formatEnergyValue(e.getMaxEnergyStored())));
-			});
-		}
-	}
-
-
-	@Override
-	public boolean isBarVisible(ItemStack stack) {
-		if (Config.USE_ENERGY.get()) {
-			return true;
-
-		} else {
-			return stack.isDamaged();
-		}
-	}
-
-
 	public ItemStack getPoweredInstance() {
 		ItemStack stack = new ItemStack(this);
 
@@ -270,6 +266,17 @@ public class MechArmorItem extends ArmorItem {
 
 		list.add(stack);
 		return list;
+	}
+
+
+	@Override
+	public boolean isBarVisible(ItemStack stack) {
+		if (Config.USE_ENERGY.get()) {
+			return true;
+
+		} else {
+			return stack.isDamaged();
+		}
 	}
 
 
