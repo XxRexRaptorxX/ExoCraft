@@ -10,7 +10,10 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -43,18 +46,35 @@ public class MechArmorItem extends ArmorItem {
 	 */
 	private int getMechSuitAmount(ArmorTypes armorType, Player player) {
 		int amount = 0;
+		long time = player.level().getGameTime();
 
-		Item helmet = player.getInventory().getArmor(3).getItem();
-		Item chestplate = player.getInventory().getArmor(2).getItem();
-		Item leggings = player.getInventory().getArmor(1).getItem();
-		Item boots = player.getInventory().getArmor(0).getItem();
+		ItemStack helmet = player.getInventory().getArmor(3);
+		ItemStack chestplate = player.getInventory().getArmor(2);
+		ItemStack leggings = player.getInventory().getArmor(1);
+		ItemStack boots = player.getInventory().getArmor(0);
 
-		if (helmet.toString().contains(armorType.getRegistryName())) amount++;
-		if (chestplate.toString().contains(armorType.getRegistryName())) amount++;
-		if (leggings.toString().contains(armorType.getRegistryName())) amount++;
-		if (boots.toString().contains(armorType.getRegistryName())) amount++;
+		if (checkArmorType(helmet, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(helmet))) {
+			if (time % 5 == 0) consumeEnergy(helmet, 1);
+			amount++;
+		}
+		if (checkArmorType(chestplate, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(chestplate))) {
+			if (time % 5 == 0) consumeEnergy(chestplate, 1);
+			amount++;
+		}
+		if (checkArmorType(leggings, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(leggings))) {
+			if (time % 5 == 0) consumeEnergy(leggings, 1);
+			amount++;
+		}
+		if (checkArmorType(boots, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(boots))) {
+			if (time % 5 == 0) consumeEnergy(boots, 1);
+			amount++;
+		}
 
 		return amount;
+	}
+
+	private boolean checkArmorType(ItemStack stack, ArmorTypes armorType) {
+		return stack.getItem().toString().contains(armorType.getRegistryName());
 	}
 
 
@@ -69,7 +89,6 @@ public class MechArmorItem extends ArmorItem {
 			int stryderCounter = getMechSuitAmount(ArmorTypes.STRYDER, player);
 			int ogreCounter = getMechSuitAmount(ArmorTypes.OGRE, player);
 			int ionCounter = getMechSuitAmount(ArmorTypes.ION, player);
-
 
 			//ATLAS
 			switch (atlasCounter) {
@@ -178,6 +197,8 @@ public class MechArmorItem extends ArmorItem {
 				default:
 					break;
 			}
+
+
 		}
 	}
 
@@ -322,4 +343,18 @@ public class MechArmorItem extends ArmorItem {
 		return maxEnergy;
 	}
 
+
+	public static boolean hasEnergy(ItemStack stack) {
+		return stack.getOrCreateTag().getInt("energy") > 0;
+	}
+
+
+	private static void consumeEnergy(ItemStack stack, Integer maxExtract) {
+		if (Config.USE_ENERGY.get() && hasEnergy(stack)) {
+			LazyOptional<IEnergyStorage> energy = stack.getCapability(ForgeCapabilities.ENERGY);
+
+			IEnergyStorage energyStorage = energy.orElseThrow(IllegalStateException::new);
+			energyStorage.extractEnergy(maxExtract, false);
+		}
+	}
 }
