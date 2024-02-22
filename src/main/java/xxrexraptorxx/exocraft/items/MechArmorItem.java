@@ -36,7 +36,6 @@ public class MechArmorItem extends ArmorItem {
 	private static final int maxEnergy = 50000;
 	private static final int maxTransfer = 1500;
 
-
 	public MechArmorItem(ArmorMaterial material, Type type, Properties properties) {
 		super(material, type, properties);
 	}
@@ -53,25 +52,26 @@ public class MechArmorItem extends ArmorItem {
 		ItemStack leggings = player.getInventory().getArmor(1);
 		ItemStack boots = player.getInventory().getArmor(0);
 
-		if (checkArmorType(helmet, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(helmet))) {
+		if (checkArmorType(helmet, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(helmet)) && helmet.getDamageValue() < helmet.getMaxDamage() - 1) {
 			if (time % 5 == 0) consumeEnergy(helmet, 1);
 			amount++;
 		}
-		if (checkArmorType(chestplate, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(chestplate))) {
+		if (checkArmorType(chestplate, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(chestplate)) && chestplate.getDamageValue() < chestplate.getMaxDamage() - 1) {
 			if (time % 5 == 0) consumeEnergy(chestplate, 1);
 			amount++;
 		}
-		if (checkArmorType(leggings, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(leggings))) {
+		if (checkArmorType(leggings, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(leggings)) && leggings.getDamageValue() < leggings.getMaxDamage() - 1) {
 			if (time % 5 == 0) consumeEnergy(leggings, 1);
 			amount++;
 		}
-		if (checkArmorType(boots, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(boots))) {
+		if (checkArmorType(boots, armorType) && (!Config.USE_ENERGY.get() || hasEnergy(boots)) && boots.getDamageValue() < boots.getMaxDamage() - 1) {
 			if (time % 5 == 0) consumeEnergy(boots, 1);
 			amount++;
 		}
 
 		return amount;
 	}
+
 
 	private boolean checkArmorType(ItemStack stack, ArmorTypes armorType) {
 		return stack.getItem().toString().contains(armorType.getRegistryName());
@@ -197,7 +197,6 @@ public class MechArmorItem extends ArmorItem {
 				default:
 					break;
 			}
-
 
 		}
 	}
@@ -330,7 +329,17 @@ public class MechArmorItem extends ArmorItem {
 
 	@Override
 	public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
-		return Config.USE_DURABILITY.get() ? amount : 0;
+		if (Config.USE_ENERGY.get()) {
+			if (Config.USE_DURABILITY.get()) {
+				return stack.getDamageValue() == stack.getMaxDamage() - 1 ? 0 : amount;
+
+			} else {
+				return 0;
+			}
+
+		} else {
+			return Config.USE_DURABILITY.get() ? amount : 0;
+		}
 	}
 
 
