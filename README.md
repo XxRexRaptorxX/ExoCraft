@@ -12,11 +12,20 @@
 
 This Titanfall / Anthem inspired mod adds exosuits with different cool effects to the game!
 
+![](https://i.imgur.com/cLjeTuX.png)
+
 
 -----
 
-![](https://i.imgur.com/cLjeTuX.png)
+## 📖 Features
 
+-----
+
+- many different armor sets with their own effects
+- wear a complete armor set to enhance the effects or mix different pieces to get the perfect effects!
+- wide compatibility with other tech mods
+- highly configurable
+- can be used either with or without energy [FE]
 
 -----
 
