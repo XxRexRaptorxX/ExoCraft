@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "item": "exocraft:lava_crystal_ore"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "exocraft:lava_crystal"
+  }
+}
