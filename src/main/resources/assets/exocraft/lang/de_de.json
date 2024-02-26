@@ -6,6 +6,14 @@
     "message.exocraft.old_unit_desc": "Rechtsklick um die Einheit zu reinigen.",
     "message.exocraft.energy": "Strom",
     "message.exocraft.durability": "Haltbarkeit",
+    "message.exocraft.modules": "Module",
+    "message.exocraft.helmet": "Exosuit Helme",
+    "message.exocraft.chestplate": "Exosuit Brustpanzern",
+    "message.exocraft.leggings": "Exosuit Fußpanzern",
+    "message.exocraft.boots": "Exosuit Stiefeln",
+    "message.exocraft.all": "Exosuit",
+    "message.exocraft.can_install": "Kann installiert werden auf:",
+    "message.exocraft.install_desc": "Ziehe die entsprechende Rüstung auf das Modul zum installieren.",
 
     "container.upgrade": "Schmieden",
 
@@ -56,6 +64,17 @@
     "item.exocraft.matrix_legion": "Legion Matrix",
     "item.exocraft.matrix_stryder": "Stryder Matrix",
     "item.exocraft.matrix_ion": "Ion Matrix",
+
+    "item.exocraft.snow_walker_module": "Schneeläufer-Modul",
+    "message.exocraft.snow_walker_module_desc": "Lässt dich auf Pulverschnee laufen.",
+    "item.exocraft.advanced_visor_module": "Besseres Visor-Modul",
+    "message.exocraft.advanced_visor_module_desc": "Schützt dich vor Enderman Aggression beim schauen.",
+    "item.exocraft.glider_module": "Gleiter-Modul",
+    "message.exocraft.glider_module_desc": "Lässt dich durch die Luft gleiten.",
+    "item.exocraft.deterrence_module": "Abschreckungs-Modul",
+    "message.exocraft.deterrence_module_desc": "Lässt Schweinis dich akzeptieren.",
+    "item.exocraft.fire_resistant_coating_module": "Feuerresistente Beschichtungs-Modul",
+    "message.exocraft.fire_resistant_coating_module_desc": "Schützt das gedroppte Item vor der Zerstörung von Feuer oder Lava.",
 
     "item.exocraft.industrial_excavator": "Industrieller Schaufler",
     "item.exocraft.industrial_miner": "Industrieller Graber",

@@ -4,13 +4,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import xxrexraptorxx.exocraft.main.References;
-
-import java.util.ArrayList;
+import xxrexraptorxx.exocraft.utils.Config;
 
 public class CreativeTabs {
 
@@ -75,6 +73,12 @@ public class CreativeTabs {
                 output.accept(ModItems.STRYDER_UNIT.get());
                 output.accept(ModItems.ION_UNIT.get());
                 output.accept(ModItems.OLD_UNIT.get());
+
+                if (Config.ENABLE_SNOW_WALKER_MODULE.get()) output.accept(ModItems.SNOW_WALKER_MODULE.get());
+                if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) output.accept(ModItems.ADVANCED_VISOR_MODULE.get());
+                if (Config.ENABLE_GLIDER_MODULE.get()) output.accept(ModItems.GLIDER_MODULE.get());
+                if (Config.ENABLE_DETERRENCE_MODULE.get()) output.accept(ModItems.DETERRENCE_MODULE.get());
+                if (Config.ENABLE_FIRE_RESISTANT_COATING_MODULE.get()) output.accept(ModItems.FIRE_RESISTANT_COATING_MODULE.get());
 
                 output.accept(ModBlocks.LAVA_CRYSTAL_ORE.get());
                 output.accept(ModBlocks.LAVA_CRYSTAL_BLOCK.get());

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+
+    {
+      "item": "exocraft:atlas_boots"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+
+  "result": {
+    "item": "exocraft:atlas_boots",
+    "nbt": "{module:\"exocraft:snow_walker\"}"
+  }
+}

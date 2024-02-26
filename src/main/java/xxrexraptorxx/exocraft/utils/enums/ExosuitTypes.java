@@ -1,8 +1,6 @@
-package xxrexraptorxx.exocraft.utils;
+package xxrexraptorxx.exocraft.utils.enums;
 
-import xxrexraptorxx.exocraft.main.References;
-
-public enum ArmorTypes {
+public enum ExosuitTypes {
 
     ATLAS ("atlas"),
     LEGION("legion"),
@@ -13,7 +11,7 @@ public enum ArmorTypes {
 
     private String registry_name;
 
-    ArmorTypes(String registry_name) {
+    ExosuitTypes(String registry_name) {
         this.registry_name = registry_name;
     }
 

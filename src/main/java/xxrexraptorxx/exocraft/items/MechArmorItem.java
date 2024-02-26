@@ -8,22 +8,26 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
+import xxrexraptorxx.exocraft.main.References;
 import xxrexraptorxx.exocraft.utils.ArmorHelper;
-import xxrexraptorxx.exocraft.utils.ArmorTypes;
 import xxrexraptorxx.exocraft.utils.Config;
 import xxrexraptorxx.exocraft.utils.ModEnergyStorage;
+import xxrexraptorxx.exocraft.utils.enums.ExosuitTypes;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -43,10 +47,9 @@ public class MechArmorItem extends ArmorItem {
 	/**
 	 * Counts how many armor pieces of a certain type are on the player.
 	 */
-	private int getMechSuitAmount(ArmorTypes armorType, Player player) {
+	private int getMechSuitAmount(ExosuitTypes armorType, Player player) {
 		int amount = 0;
 		long time = player.level().getGameTime();
-
 		ItemStack helmet = player.getInventory().getArmor(3);
 		ItemStack chestplate = player.getInventory().getArmor(2);
 		ItemStack leggings = player.getInventory().getArmor(1);
@@ -73,7 +76,7 @@ public class MechArmorItem extends ArmorItem {
 	}
 
 
-	private boolean checkArmorType(ItemStack stack, ArmorTypes armorType) {
+	private boolean checkArmorType(ItemStack stack, ExosuitTypes armorType) {
 		return stack.getItem().toString().contains(armorType.getRegistryName());
 	}
 
@@ -84,11 +87,11 @@ public class MechArmorItem extends ArmorItem {
 
 			Player player = (Player) entity;
 
-			int atlasCounter = getMechSuitAmount(ArmorTypes.ATLAS, player);
-			int legionCounter = getMechSuitAmount(ArmorTypes.LEGION, player);
-			int stryderCounter = getMechSuitAmount(ArmorTypes.STRYDER, player);
-			int ogreCounter = getMechSuitAmount(ArmorTypes.OGRE, player);
-			int ionCounter = getMechSuitAmount(ArmorTypes.ION, player);
+			int atlasCounter = getMechSuitAmount(ExosuitTypes.ATLAS, player);
+			int legionCounter = getMechSuitAmount(ExosuitTypes.LEGION, player);
+			int stryderCounter = getMechSuitAmount(ExosuitTypes.STRYDER, player);
+			int ogreCounter = getMechSuitAmount(ExosuitTypes.OGRE, player);
+			int ionCounter = getMechSuitAmount(ExosuitTypes.ION, player);
 
 			//ATLAS
 			switch (atlasCounter) {
@@ -365,5 +368,84 @@ public class MechArmorItem extends ArmorItem {
 			IEnergyStorage energyStorage = energy.orElseThrow(IllegalStateException::new);
 			energyStorage.extractEnergy(maxExtract, false);
 		}
+	}
+
+
+	// MODULES //
+
+	@Override
+	public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
+		if (Config.ENABLE_SNOW_WALKER_MODULE.get()) {
+			return stack.getOrCreateTag().getString("module") == References.MODID + ":snow_walker";
+
+		} else {
+			return false;
+		}
+	}
+
+
+	@Override
+	public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+		if (Config.ENABLE_DETERRENCE_MODULE.get()) {
+			return stack.getOrCreateTag().getString("module") == References.MODID + ":deterrence";
+
+		} else {
+			return false;
+		}
+	}
+
+
+	@Override
+	public boolean isEnderMask(ItemStack stack, Player player, EnderMan endermanEntity) {
+		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) {
+			return stack.getOrCreateTag().getString("module") == References.MODID + ":advanced_visor";
+
+		} else {
+			return false;
+		}
+	}
+
+
+	@Override
+	public boolean isFireResistant() {
+		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) {
+			return new ItemStack(this).getOrCreateTag().getString("module") == References.MODID + ":advanced_visor";
+
+		} else {
+			return false;
+		}
+	}
+
+
+	@Override
+	public boolean canElytraFly(ItemStack stack, net.minecraft.world.entity.LivingEntity entity) {
+		if (Config.ENABLE_GLIDER_MODULE.get() && stack.getOrCreateTag().getString("module") == References.MODID + ":glider") {
+			return isFlyEnabled(stack);
+
+		} else {
+			return false;
+		}
+	}
+
+
+	public static boolean isFlyEnabled(ItemStack stack) {
+		return stack.getDamageValue() < stack.getMaxDamage() - 1;
+	}
+
+
+	@Override
+	public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
+		if (!entity.level().isClientSide) {
+			int nextFlightTick = flightTicks + 1;
+
+			if (nextFlightTick % 10 == 0) {
+				if (nextFlightTick % 20 == 0) {
+					stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
+				}
+				entity.gameEvent(GameEvent.ELYTRA_GLIDE);
+			}
+		}
+
+		return true;
 	}
 }

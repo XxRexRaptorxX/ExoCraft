@@ -12,11 +12,13 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.event.ItemStackedOnOtherEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
@@ -24,6 +26,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.VersionChecker;
 import net.minecraftforge.fml.common.Mod;
+import xxrexraptorxx.exocraft.items.MechArmorItem;
+import xxrexraptorxx.exocraft.items.ModuleItem;
 import xxrexraptorxx.exocraft.main.Exocraft;
 import xxrexraptorxx.exocraft.main.References;
 import xxrexraptorxx.exocraft.registry.ModItems;
@@ -163,6 +167,34 @@ public class Events {
             ItemStack cost = new ItemStack(Items.EMERALD, Config.UNIT_COST.get());
 
             trades.add(((trader, random) -> new MerchantOffer(cost, new ItemStack(ModItems.OLD_UNIT.get()), 1, 3, 0.05F)));
+        }
+    }
+
+
+    @SubscribeEvent
+    public static void equipModules(ItemStackedOnOtherEvent event) {
+        ItemStack module = event.getCarriedItem();
+        ItemStack armor = event.getStackedOnItem();
+        ClickAction action = event.getClickAction();
+
+        if (armor.getItem() instanceof MechArmorItem && module.getItem() instanceof ModuleItem && action == ClickAction.PRIMARY) {
+            module.shrink(1);
+
+            if (module.getItem() == ModItems.SNOW_WALKER_MODULE.get()) {
+                armor.getOrCreateTag().putString("module", References.MODID + ":snow_walker");
+
+            } else if (module.getItem() == ModItems.ADVANCED_VISOR_MODULE.get()) {
+                armor.getOrCreateTag().putString("module", References.MODID + ":advanced_visor");
+
+            } else if (module.getItem() == ModItems.GLIDER_MODULE.get()) {
+                armor.getOrCreateTag().putString("module", References.MODID + ":glider");
+
+            } else if (module.getItem() == ModItems.DETERRENCE_MODULE.get()) {
+                armor.getOrCreateTag().putString("module", References.MODID + ":deterrence");
+
+            } else if (module.getItem() == ModItems.FIRE_RESISTANT_COATING_MODULE.get()) {
+                armor.getOrCreateTag().putString("module", References.MODID + ":fire_resistant_coating");
+            }
         }
     }
 

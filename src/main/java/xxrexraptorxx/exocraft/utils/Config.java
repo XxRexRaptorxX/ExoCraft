@@ -11,6 +11,7 @@ public class Config {
     public static final String CATEGORY_GENERAL = "general";
     public static final String CATEGORY_WORLD = "world";
     public static final String CATEGORY_ARMOR = "armor";
+    public static final String CATEGORY_MODULES = "modules";
 
     public static ForgeConfigSpec CLIENT_CONFIG;
     public static ForgeConfigSpec SERVER_CONFIG;
@@ -24,6 +25,12 @@ public class Config {
     public static ForgeConfigSpec.BooleanValue USE_DURABILITY;
     public static ForgeConfigSpec.BooleanValue WANDERING_TRADES;
     public static ForgeConfigSpec.IntValue UNIT_COST;
+
+    public static ForgeConfigSpec.BooleanValue ENABLE_SNOW_WALKER_MODULE;
+    public static ForgeConfigSpec.BooleanValue ENABLE_ADVANCED_VISOR_MODULE;
+    public static ForgeConfigSpec.BooleanValue ENABLE_GLIDER_MODULE;
+    public static ForgeConfigSpec.BooleanValue ENABLE_DETERRENCE_MODULE;
+    public static ForgeConfigSpec.BooleanValue ENABLE_FIRE_RESISTANT_COATING_MODULE;
 
 
     public static void init() {
@@ -58,6 +65,14 @@ public class Config {
         USE_DURABILITY = builder.comment("Should mech suits use up durability when they receive damage?").define("use_durability", true);
         IS_TABLE_ENCHANTABLE = builder.comment("Should mech suits be enchantable at the enchantment table?").define("is_table_enchantable", false);
         IS_BOOK_ENCHANTABLE = builder.comment("Should mech suits be enchantable with enchantment books?").define("is_book_enchantable", false);
+        builder.pop();
+
+        builder.comment("Modules").push(CATEGORY_MODULES);
+        ENABLE_SNOW_WALKER_MODULE = builder.comment("Enable the snow walker module?").define("enable_snow_walker_module", true);
+        ENABLE_ADVANCED_VISOR_MODULE = builder.comment("Enable the advanced visor module?").define("enable_advanced_visor_module", true);
+        ENABLE_GLIDER_MODULE = builder.comment("Enable the glider module?").define("enable_glider_module", true);
+        ENABLE_DETERRENCE_MODULE = builder.comment("Enable the deterrence module?").define("enable_deterrence_module", true);
+        ENABLE_FIRE_RESISTANT_COATING_MODULE = builder.comment("Enable the fire resistant coating module?").define("enable_fire_resistant_coating", true);
         builder.pop();
 
         builder.comment("World").push(CATEGORY_WORLD);
