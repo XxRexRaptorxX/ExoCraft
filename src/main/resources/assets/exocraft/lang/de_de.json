@@ -13,7 +13,7 @@
     "message.exocraft.boots": "Exosuit Stiefeln",
     "message.exocraft.all": "Exosuit",
     "message.exocraft.can_install": "Kann installiert werden auf:",
-    "message.exocraft.install_desc": "Ziehe die entsprechende Rüstung auf das Modul zum installieren.",
+    "message.exocraft.install_desc": "Ziehe das Modul auf eine gültiges Exosuit Teil um es zu installieren.",
 
     "container.upgrade": "Schmieden",
 

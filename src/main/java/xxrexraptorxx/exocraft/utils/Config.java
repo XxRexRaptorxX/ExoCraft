@@ -30,7 +30,7 @@ public class Config {
     public static ForgeConfigSpec.BooleanValue ENABLE_ADVANCED_VISOR_MODULE;
     public static ForgeConfigSpec.BooleanValue ENABLE_GLIDER_MODULE;
     public static ForgeConfigSpec.BooleanValue ENABLE_DETERRENCE_MODULE;
-    public static ForgeConfigSpec.BooleanValue ENABLE_FIRE_RESISTANT_COATING_MODULE;
+    //public static ForgeConfigSpec.BooleanValue ENABLE_FIRE_RESISTANT_COATING_MODULE;
 
 
     public static void init() {
@@ -72,7 +72,7 @@ public class Config {
         ENABLE_ADVANCED_VISOR_MODULE = builder.comment("Enable the advanced visor module?").define("enable_advanced_visor_module", true);
         ENABLE_GLIDER_MODULE = builder.comment("Enable the glider module?").define("enable_glider_module", true);
         ENABLE_DETERRENCE_MODULE = builder.comment("Enable the deterrence module?").define("enable_deterrence_module", true);
-        ENABLE_FIRE_RESISTANT_COATING_MODULE = builder.comment("Enable the fire resistant coating module?").define("enable_fire_resistant_coating", true);
+        //ENABLE_FIRE_RESISTANT_COATING_MODULE = builder.comment("Enable the fire resistant coating module?").define("enable_fire_resistant_coating", true);
         builder.pop();
 
         builder.comment("World").push(CATEGORY_WORLD);

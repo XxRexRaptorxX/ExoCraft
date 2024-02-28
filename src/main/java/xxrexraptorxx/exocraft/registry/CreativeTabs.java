@@ -78,7 +78,7 @@ public class CreativeTabs {
                 if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) output.accept(ModItems.ADVANCED_VISOR_MODULE.get());
                 if (Config.ENABLE_GLIDER_MODULE.get()) output.accept(ModItems.GLIDER_MODULE.get());
                 if (Config.ENABLE_DETERRENCE_MODULE.get()) output.accept(ModItems.DETERRENCE_MODULE.get());
-                if (Config.ENABLE_FIRE_RESISTANT_COATING_MODULE.get()) output.accept(ModItems.FIRE_RESISTANT_COATING_MODULE.get());
+                //if (Config.ENABLE_FIRE_RESISTANT_COATING_MODULE.get()) output.accept(ModItems.FIRE_RESISTANT_COATING_MODULE.get());
 
                 output.accept(ModBlocks.LAVA_CRYSTAL_ORE.get());
                 output.accept(ModBlocks.LAVA_CRYSTAL_BLOCK.get());

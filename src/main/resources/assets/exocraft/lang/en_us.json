@@ -13,7 +13,7 @@
     "message.exocraft.boots": "Exosuit Boots",
     "message.exocraft.all": "Exosuit",
     "message.exocraft.can_install": "Can be installed on:",
-    "message.exocraft.install_desc": "Drag the appropriate armor onto the module to install.",
+    "message.exocraft.install_desc": "Drag the module onto a valid Exosuit part to install it.",
 
     "container.upgrade": "Smithing",
 

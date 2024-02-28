@@ -12,10 +12,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.capabilities.Capability;
@@ -24,10 +21,12 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
 import xxrexraptorxx.exocraft.main.References;
+import xxrexraptorxx.exocraft.registry.ModItems;
 import xxrexraptorxx.exocraft.utils.ArmorHelper;
 import xxrexraptorxx.exocraft.utils.Config;
 import xxrexraptorxx.exocraft.utils.ModEnergyStorage;
 import xxrexraptorxx.exocraft.utils.enums.ExosuitTypes;
+import xxrexraptorxx.exocraft.utils.enums.Modules;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -43,6 +42,7 @@ public class MechArmorItem extends ArmorItem {
 	public MechArmorItem(ArmorMaterial material, Type type, Properties properties) {
 		super(material, type, properties);
 	}
+
 
 	/**
 	 * Counts how many armor pieces of a certain type are on the player.
@@ -219,7 +219,25 @@ public class MechArmorItem extends ArmorItem {
 
 				list.add(Component.translatable("message.exocraft.durability").withStyle(ChatFormatting.GRAY).append(Component.literal(": " + ArmorHelper.getDamageColor(damagePercentage) + String.valueOf(damagePercentage) + "%")));
 			}
+			list.add(Component.empty());
 		}
+
+
+		if (Config.ENABLE_SNOW_WALKER_MODULE.get() && stack.getOrCreateTag().getBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName())) {
+			list.add(Component.literal("> ").append(Component.translatable(Modules.SNOW_WALKER_MODULE.getLangKey()).withStyle(ChatFormatting.GRAY)));
+		}
+		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get() && stack.getOrCreateTag().getBoolean(Modules.ADVANCED_VISOR_MODULE.getRegistryName())) {
+			list.add(Component.literal("> ").append(Component.translatable(Modules.ADVANCED_VISOR_MODULE.getLangKey()).withStyle(ChatFormatting.GRAY)));
+		}
+		if (Config.ENABLE_GLIDER_MODULE.get() && stack.getOrCreateTag().getBoolean(Modules.GLIDER_MODULE.getRegistryName())) {
+			list.add(Component.literal("> ").append(Component.translatable(Modules.GLIDER_MODULE.getLangKey()).withStyle(ChatFormatting.GRAY)));
+		}
+		if (Config.ENABLE_DETERRENCE_MODULE.get() && stack.getOrCreateTag().getBoolean(Modules.DETERRENCE_MODULE.getRegistryName())) {
+			list.add(Component.literal("> ").append(Component.translatable(Modules.DETERRENCE_MODULE.getLangKey()).withStyle(ChatFormatting.GRAY)));
+		}
+		//if (Config.ENABLE_FIRE_RESISTANT_COATING_MODULE.get() && stack.getOrCreateTag().getBoolean(Modules.FIRE_RESISTANT_COATING_MODULE.getRegistryName())) {
+		//	list.add(Component.literal("> ").append(Component.translatable(Modules.FIRE_RESISTANT_COATING_MODULE.getLangKey()).withStyle(ChatFormatting.GRAY)));
+		//}
 	}
 
 
@@ -376,7 +394,7 @@ public class MechArmorItem extends ArmorItem {
 	@Override
 	public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
 		if (Config.ENABLE_SNOW_WALKER_MODULE.get()) {
-			return stack.getOrCreateTag().getString("module") == References.MODID + ":snow_walker";
+			return stack.getOrCreateTag().getBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName());
 
 		} else {
 			return false;
@@ -387,7 +405,7 @@ public class MechArmorItem extends ArmorItem {
 	@Override
 	public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
 		if (Config.ENABLE_DETERRENCE_MODULE.get()) {
-			return stack.getOrCreateTag().getString("module") == References.MODID + ":deterrence";
+			return stack.getOrCreateTag().getBoolean(Modules.DETERRENCE_MODULE.getRegistryName());
 
 		} else {
 			return false;
@@ -398,7 +416,7 @@ public class MechArmorItem extends ArmorItem {
 	@Override
 	public boolean isEnderMask(ItemStack stack, Player player, EnderMan endermanEntity) {
 		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) {
-			return stack.getOrCreateTag().getString("module") == References.MODID + ":advanced_visor";
+			return stack.getOrCreateTag().getBoolean(Modules.ADVANCED_VISOR_MODULE.getRegistryName());
 
 		} else {
 			return false;
@@ -406,20 +424,20 @@ public class MechArmorItem extends ArmorItem {
 	}
 
 
+	//@Override			TODO! not working
+	//public boolean isFireResistant() {
+	//	if (Config.ENABLE_FIRE_RESISTANT_COATING_MODULE.get()) {
+	//		return new ItemStack(this.asItem()).getOrCreateTag().getBoolean(Modules.FIRE_RESISTANT_COATING_MODULE.getRegistryName());
+	//
+	//	} else {
+	//		return false;
+	//	}
+	//}
+
+
 	@Override
-	public boolean isFireResistant() {
-		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) {
-			return new ItemStack(this).getOrCreateTag().getString("module") == References.MODID + ":advanced_visor";
-
-		} else {
-			return false;
-		}
-	}
-
-
-	@Override
-	public boolean canElytraFly(ItemStack stack, net.minecraft.world.entity.LivingEntity entity) {
-		if (Config.ENABLE_GLIDER_MODULE.get() && stack.getOrCreateTag().getString("module") == References.MODID + ":glider") {
+	public boolean canElytraFly(ItemStack stack, LivingEntity entity) {
+		if (Config.ENABLE_GLIDER_MODULE.get() && stack.getOrCreateTag().getBoolean(Modules.GLIDER_MODULE.getRegistryName())) {
 			return isFlyEnabled(stack);
 
 		} else {
