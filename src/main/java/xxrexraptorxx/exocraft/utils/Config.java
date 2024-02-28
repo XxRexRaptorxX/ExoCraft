@@ -23,6 +23,7 @@ public class Config {
     public static ForgeConfigSpec.BooleanValue IS_BOOK_ENCHANTABLE;
     public static ForgeConfigSpec.BooleanValue USE_ENERGY;
     public static ForgeConfigSpec.BooleanValue USE_DURABILITY;
+    public static ForgeConfigSpec.BooleanValue USE_ENERGY_FOR_MODULES;
     public static ForgeConfigSpec.BooleanValue WANDERING_TRADES;
     public static ForgeConfigSpec.IntValue UNIT_COST;
 
@@ -68,6 +69,7 @@ public class Config {
         builder.pop();
 
         builder.comment("Modules").push(CATEGORY_MODULES);
+        USE_ENERGY_FOR_MODULES = builder.comment("Should some modules use energy (FE) to work?").define("use_energy_for_modules", true);
         ENABLE_SNOW_WALKER_MODULE = builder.comment("Enable the snow walker module?").define("enable_snow_walker_module", true);
         ENABLE_ADVANCED_VISOR_MODULE = builder.comment("Enable the advanced visor module?").define("enable_advanced_visor_module", true);
         ENABLE_GLIDER_MODULE = builder.comment("Enable the glider module?").define("enable_glider_module", true);

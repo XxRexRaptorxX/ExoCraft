@@ -12,7 +12,10 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.capabilities.Capability;
@@ -20,8 +23,6 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
-import xxrexraptorxx.exocraft.main.References;
-import xxrexraptorxx.exocraft.registry.ModItems;
 import xxrexraptorxx.exocraft.utils.ArmorHelper;
 import xxrexraptorxx.exocraft.utils.Config;
 import xxrexraptorxx.exocraft.utils.ModEnergyStorage;
@@ -393,34 +394,40 @@ public class MechArmorItem extends ArmorItem {
 
 	@Override
 	public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
-		if (Config.ENABLE_SNOW_WALKER_MODULE.get()) {
-			return stack.getOrCreateTag().getBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName());
+		if (Config.ENABLE_SNOW_WALKER_MODULE.get() && stack.hasTag()) {
 
-		} else {
-			return false;
+			boolean snowWalkerEnabled = stack.getOrCreateTag().getBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName());
+
+			return (!Config.USE_ENERGY.get() || hasEnergy(stack)) && snowWalkerEnabled;
 		}
+
+		return false;
 	}
 
 
 	@Override
 	public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
-		if (Config.ENABLE_DETERRENCE_MODULE.get()) {
-			return stack.getOrCreateTag().getBoolean(Modules.DETERRENCE_MODULE.getRegistryName());
+		if (Config.ENABLE_DETERRENCE_MODULE.get() && stack.hasTag()) {
 
-		} else {
-			return false;
+			boolean snowWalkerEnabled = stack.getOrCreateTag().getBoolean(Modules.DETERRENCE_MODULE.getRegistryName());
+
+			return (!Config.USE_ENERGY.get() || hasEnergy(stack)) && snowWalkerEnabled;
 		}
+
+		return false;
 	}
 
 
 	@Override
-	public boolean isEnderMask(ItemStack stack, Player player, EnderMan endermanEntity) {
-		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) {
-			return stack.getOrCreateTag().getBoolean(Modules.ADVANCED_VISOR_MODULE.getRegistryName());
+	public boolean isEnderMask(ItemStack stack, Player player, EnderMan entity) {
+		if (Config.ENABLE_ADVANCED_VISOR_MODULE.get() && stack.hasTag()) {
 
-		} else {
-			return false;
+			boolean snowWalkerEnabled = stack.getOrCreateTag().getBoolean(Modules.ADVANCED_VISOR_MODULE.getRegistryName());
+
+			return (!Config.USE_ENERGY.get() || hasEnergy(stack)) && snowWalkerEnabled;
 		}
+
+		return false;
 	}
 
 
@@ -458,7 +465,18 @@ public class MechArmorItem extends ArmorItem {
 
 			if (nextFlightTick % 10 == 0) {
 				if (nextFlightTick % 20 == 0) {
-					stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
+
+					if (Config.USE_ENERGY.get() && Config.USE_ENERGY_FOR_MODULES.get()) {
+						if (hasEnergy(stack)) {
+							consumeEnergy(stack, 1);
+
+						} else {
+							return false;
+						}
+
+					} else {
+						stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
+					}
 				}
 				entity.gameEvent(GameEvent.ELYTRA_GLIDE);
 			}
