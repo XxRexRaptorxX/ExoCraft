@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+
+    {
+      "item": "exocraft:blank_module"
+    },
+    {
+      "item": "minecraft:elytra"
+    }
+  ],
+
+  "result": {
+    "item": "exocraft:glider_module"
+  }
+}

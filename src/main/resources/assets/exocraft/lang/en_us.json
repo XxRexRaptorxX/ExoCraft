@@ -65,6 +65,7 @@
     "item.exocraft.matrix_stryder": "Stryder Matrix",
     "item.exocraft.matrix_ion": "Ion Matrix",
 
+    "item.exocraft.blank_module": "Blank Module",
     "item.exocraft.snow_walker_module": "Snow Walker Module",
     "message.exocraft.snow_walker_module_desc": "Makes it possible to run on powder snow.",
     "item.exocraft.advanced_visor_module": "Advanced Visor Module",

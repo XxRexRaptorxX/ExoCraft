@@ -6,31 +6,28 @@
     }
   ],
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "misc",
   "pattern": [
   
-    "#I#",
-    "YXY",
-    "#I#"
+    "III",
+    "#X#",
+    "###"
     
   ],
 
   "key": {
     "X": {
-      "item": "minecraft:comparator"
+      "tag": "forge:circuits/basic"
     },
     "#": {
       "tag": "forge:ingots/iron"
     },
     "I": {
       "tag": "forge:ingots/copper"
-    },
-    "Y": {
-      "tag": "forge:dusts/redstone"
     }
   },
-  
+
   "result": {
-    "item": "exocraft:redstone_circuit"
+    "item": "exocraft:blank_module"
   }
 }

@@ -182,7 +182,8 @@ public class Events {
         Level level = player.level();
         BlockPos pos = player.getOnPos();
 
-        if (armor.getItem() instanceof MechArmorItem && module.getItem() instanceof ModuleItem && action == ClickAction.PRIMARY && ModuleItem.isCorrectModule((MechArmorItem) armor.getItem(), module.getItem())) {
+        if (armor.getItem() instanceof MechArmorItem && module.getItem() instanceof ModuleItem && module.getItem() != ModItems.BLANK_MODULE.get() &&
+                action == ClickAction.PRIMARY && ModuleItem.isCorrectModule((MechArmorItem) armor.getItem(), module.getItem())) {
 
             if (module.getItem() == ModItems.SNOW_WALKER_MODULE.get() && !armor.getOrCreateTag().getBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName())) {
                 armor.getOrCreateTag().putBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName(), true);

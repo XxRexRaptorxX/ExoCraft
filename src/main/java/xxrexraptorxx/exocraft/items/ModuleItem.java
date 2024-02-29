@@ -24,10 +24,12 @@ public class ModuleItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> list, TooltipFlag flag) {
-        list.add(Component.translatable("message.exocraft.install_desc").withStyle(ChatFormatting.GRAY));
-        list.add(Component.empty());
-        list.add(Component.translatable("message.exocraft.can_install").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
-        list.add(Component.translatable(getEquipLanguageKeyForModules(stack.getItem())).withStyle(ChatFormatting.GRAY));
+        if (stack.getItem() != ModItems.BLANK_MODULE.get()) {
+            list.add(Component.translatable("message.exocraft.install_desc").withStyle(ChatFormatting.GRAY));
+            list.add(Component.empty());
+            list.add(Component.translatable("message.exocraft.can_install").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
+            list.add(Component.translatable(getEquipLanguageKeyForModules(stack.getItem())).withStyle(ChatFormatting.GRAY));
+        }
     }
 
 

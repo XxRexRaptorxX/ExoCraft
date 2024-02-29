@@ -74,6 +74,7 @@ public class CreativeTabs {
                 output.accept(ModItems.ION_UNIT.get());
                 output.accept(ModItems.OLD_UNIT.get());
 
+                output.accept(ModItems.BLANK_MODULE.get());
                 if (Config.ENABLE_SNOW_WALKER_MODULE.get()) output.accept(ModItems.SNOW_WALKER_MODULE.get());
                 if (Config.ENABLE_ADVANCED_VISOR_MODULE.get()) output.accept(ModItems.ADVANCED_VISOR_MODULE.get());
                 if (Config.ENABLE_GLIDER_MODULE.get()) output.accept(ModItems.GLIDER_MODULE.get());

@@ -70,6 +70,7 @@ public class ModItems {
     public static final RegistryObject<UnitItem> ION_UNIT = ITEMS.register("unit_ion", UnitItem::new);
     public static final RegistryObject<UnitItem> OLD_UNIT = ITEMS.register("unit_old", UnitItem::new);
 
+    public static final RegistryObject<ModuleItem> BLANK_MODULE = ITEMS.register("blank_module", ModuleItem::new);
     public static final RegistryObject<ModuleItem> SNOW_WALKER_MODULE = ITEMS.register("snow_walker_module", ModuleItem::new);
     public static final RegistryObject<ModuleItem> ADVANCED_VISOR_MODULE = ITEMS.register("advanced_visor_module", ModuleItem::new);
     public static final RegistryObject<ModuleItem> GLIDER_MODULE = ITEMS.register("glider_module", ModuleItem::new);

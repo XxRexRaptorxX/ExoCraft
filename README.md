@@ -14,6 +14,7 @@ This Titanfall / Anthem inspired mod adds exosuits with different cool effects t
 
 ![](https://i.imgur.com/cLjeTuX.png)
 
+![](https://github.com/XxRexRaptorxX/General/blob/main/2024-02-29_22.45.08.png?raw=true)
 
 -----
 

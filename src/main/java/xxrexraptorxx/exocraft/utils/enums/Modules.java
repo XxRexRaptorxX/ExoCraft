@@ -4,6 +4,7 @@ import xxrexraptorxx.exocraft.main.References;
 
 public enum Modules {
 
+    BLANK_MODULE ("blank_module"),
     SNOW_WALKER_MODULE ("snow_walker_module"),
     ADVANCED_VISOR_MODULE("advanced_visor_module"),
     GLIDER_MODULE("glider_module"),
