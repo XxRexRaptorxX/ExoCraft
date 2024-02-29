@@ -8,14 +8,12 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
-import xxrexraptorxx.exocraft.registry.ModItems;
 import xxrexraptorxx.exocraft.utils.Config;
 import xxrexraptorxx.exocraft.utils.ModEnergyStorage;
 
@@ -26,14 +24,11 @@ import java.util.List;
 
 public class EnergyItem extends Item {
 
-    private static int maxEnergy = 50000;
-    private static int maxTransfer = 1500;
-
-    public EnergyItem(int maxEnergy, int maxTransfer) {
+    public EnergyItem() {
         super(new Properties()
                 .stacksTo(16));
-        this.maxEnergy = maxEnergy;
-        this.maxTransfer = maxTransfer;
+        //this.maxEnergy = maxEnergy;
+        //this.maxTransfer = maxTransfer;
     }
 
 
@@ -57,7 +52,7 @@ public class EnergyItem extends Item {
             @Override
             public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
                 if(cap == ForgeCapabilities.ENERGY && Config.USE_ENERGY.get()) {
-                    return LazyOptional.of(() -> new ModEnergyStorage(itemStack, maxEnergy, maxTransfer)).cast();
+                    return LazyOptional.of(() -> new ModEnergyStorage(itemStack, Config.EXOSUIT_MAX_ENERGY_AMOUNT.get(), Config.EXOSUIT_MAX_ENERGY_TRANSFER.get())).cast();
                 }
                 return LazyOptional.empty();
             }
@@ -143,11 +138,11 @@ public class EnergyItem extends Item {
 
 
     public static int getMaxTransfer() {
-        return maxTransfer;
+        return Config.EXOSUIT_MAX_ENERGY_TRANSFER.get();
     }
 
 
     public static int getMaxEnergy() {
-        return maxEnergy;
+        return Config.EXOSUIT_MAX_ENERGY_AMOUNT.get();
     }
 }

@@ -51,7 +51,7 @@ public class ModItems {
     public static final RegistryObject<MechArmorItem> ION_CHESTPLATE = ITEMS.register("ion_chestplate", () -> new MechArmorItem(ArmorMaterials.ION, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<MechArmorItem> ION_BOOTS = ITEMS.register("ion_boots", () -> new MechArmorItem(ArmorMaterials.ION, ArmorItem.Type.BOOTS, new Item.Properties()));
 
-    public static final RegistryObject<EnergyItem> ENERGY_CORE = ITEMS.register("energy_core", () -> new EnergyItem(50000, 1500));
+    public static final RegistryObject<EnergyItem> ENERGY_CORE = ITEMS.register("energy_core", () -> new EnergyItem());
     public static final RegistryObject<BasicItem> LAVA_CRYSTAL = ITEMS.register("lava_crystal", BasicItem::new);
     public static final RegistryObject<BasicItem> REDSTONE_CIRCUIT = ITEMS.register("redstone_circuit", BasicItem::new);
     public static final RegistryObject<BasicItem> REINFORCED_IRON_PLATE = ITEMS.register("reinforced_iron_plate", BasicItem::new);

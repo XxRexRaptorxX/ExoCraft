@@ -37,9 +37,6 @@ import java.util.function.Consumer;
 
 public class MechArmorItem extends ArmorItem {
 
-	private static final int maxEnergy = 50000;
-	private static final int maxTransfer = 1500;
-
 	public MechArmorItem(ArmorMaterial material, Type type, Properties properties) {
 		super(material, type, properties);
 	}
@@ -276,7 +273,7 @@ public class MechArmorItem extends ArmorItem {
 			@Override
 			public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
 				if(cap == ForgeCapabilities.ENERGY && Config.USE_ENERGY.get()) {
-					return LazyOptional.of(() -> new ModEnergyStorage(itemStack, maxEnergy, maxTransfer)).cast();
+					return LazyOptional.of(() -> new ModEnergyStorage(itemStack, Config.EXOSUIT_MAX_ENERGY_AMOUNT.get(), Config.EXOSUIT_MAX_ENERGY_TRANSFER.get())).cast();
 				}
 				return LazyOptional.empty();
 			}
@@ -366,12 +363,12 @@ public class MechArmorItem extends ArmorItem {
 
 
 	public static int getMaxTransfer() {
-		return maxTransfer;
+		return Config.EXOSUIT_MAX_ENERGY_TRANSFER.get();
 	}
 
 
 	public static int getMaxEnergy() {
-		return maxEnergy;
+		return Config.EXOSUIT_MAX_ENERGY_AMOUNT.get();
 	}
 
 

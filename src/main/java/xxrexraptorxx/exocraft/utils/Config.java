@@ -26,6 +26,8 @@ public class Config {
     public static ForgeConfigSpec.BooleanValue USE_ENERGY_FOR_MODULES;
     public static ForgeConfigSpec.BooleanValue WANDERING_TRADES;
     public static ForgeConfigSpec.IntValue UNIT_COST;
+    public static ForgeConfigSpec.IntValue EXOSUIT_MAX_ENERGY_AMOUNT;
+    public static ForgeConfigSpec.IntValue EXOSUIT_MAX_ENERGY_TRANSFER;
 
     public static ForgeConfigSpec.BooleanValue ENABLE_SNOW_WALKER_MODULE;
     public static ForgeConfigSpec.BooleanValue ENABLE_ADVANCED_VISOR_MODULE;
@@ -63,6 +65,8 @@ public class Config {
 
         builder.comment("Armor").push(CATEGORY_ARMOR);
         USE_ENERGY = builder.comment("Should mech suits use energy (FE) to work?").define("use_energy", false);
+        EXOSUIT_MAX_ENERGY_AMOUNT = builder.comment("How much energy the mechsuits can store.").defineInRange("max_energy_amount", 50000, 100, Integer.MAX_VALUE);
+        EXOSUIT_MAX_ENERGY_TRANSFER = builder.comment("How much energy the mechsuits can transfer at once.").defineInRange("max_energy_transfer", 1500, 10, Integer.MAX_VALUE);
         USE_DURABILITY = builder.comment("Should mech suits use up durability when they receive damage?").define("use_durability", true);
         IS_TABLE_ENCHANTABLE = builder.comment("Should mech suits be enchantable at the enchantment table?").define("is_table_enchantable", false);
         IS_BOOK_ENCHANTABLE = builder.comment("Should mech suits be enchantable with enchantment books?").define("is_book_enchantable", false);
