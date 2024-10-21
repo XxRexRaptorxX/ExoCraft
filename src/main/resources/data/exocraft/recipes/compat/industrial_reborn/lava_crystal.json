@@ -1,0 +1,13 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "indreb"
+    }
+  ],
+  "type": "indreb:scrap_box",
+  "result": {
+    "item": "exocraft:lava_crystal"
+  },
+  "weight": 0.1
+}

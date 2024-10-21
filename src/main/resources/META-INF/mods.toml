@@ -43,3 +43,12 @@ reason="Makes it possible to produce your own units with the new machines."
 versionRange="1.20.0"
 ordering="NONE"
 side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="moremcmeta_emissive_plugin"
+mandatory=false
+type="optional"
+reason="Adds emissive textures support."
+versionRange="1.20.0"
+ordering="NONE"
+side="BOTH"

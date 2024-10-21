@@ -1,0 +1,13 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ftbic"
+    }
+  ],
+  "type": "ftbic:basic_generator_fuel",
+  "ingredient": {
+    "item": "exocraft:lava_crystal_block"
+  },
+  "ticks": 18000
+}

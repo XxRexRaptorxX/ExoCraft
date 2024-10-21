@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+
+    {
+      "item": "exocraft:blank_module"
+    },
+    {
+      "tag": "forge:leather"
+    },
+    {
+      "tag": "forge:leather"
+    },
+    {
+      "tag": "forge:leather"
+    },
+    {
+      "tag": "forge:leather"
+    }
+  ],
+
+  "result": {
+    "item": "exocraft:snow_walker_module"
+  }
+}

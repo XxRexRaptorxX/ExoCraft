@@ -2,6 +2,7 @@ package xxrexraptorxx.exocraft.world;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -12,6 +13,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -21,13 +23,17 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.VersionChecker;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.ItemStackedOnOtherEvent;
 import net.neoforged.neoforge.event.TickEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
+import xxrexraptorxx.exocraft.items.MechArmorItem;
+import xxrexraptorxx.exocraft.items.ModuleItem;
 import xxrexraptorxx.exocraft.main.Exocraft;
 import xxrexraptorxx.exocraft.main.References;
 import xxrexraptorxx.exocraft.registry.ModItems;
 import xxrexraptorxx.exocraft.utils.Config;
+import xxrexraptorxx.exocraft.utils.enums.Modules;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -165,5 +171,47 @@ public class Events {
             trades.add(((trader, random) -> new MerchantOffer(cost, new ItemStack(ModItems.OLD_UNIT.get()), 1, 3, 0.05F)));
         }
     }
+
+
+    @SubscribeEvent
+    public static void equipModules(ItemStackedOnOtherEvent event) {
+        ItemStack armor = event.getCarriedItem();
+        ItemStack module = event.getStackedOnItem();
+        ClickAction action = event.getClickAction();
+        Player player = event.getPlayer();
+        Level level = player.level();
+        BlockPos pos = player.getOnPos();
+
+        if (armor.getItem() instanceof MechArmorItem && module.getItem() instanceof ModuleItem && module.getItem() != ModItems.BLANK_MODULE.get() &&
+                action == ClickAction.PRIMARY && ModuleItem.isCorrectModule((MechArmorItem) armor.getItem(), module.getItem())) {
+
+            if (module.getItem() == ModItems.SNOW_WALKER_MODULE.get() && !armor.getOrCreateTag().getBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName())) {
+                armor.getOrCreateTag().putBoolean(Modules.SNOW_WALKER_MODULE.getRegistryName(), true);
+                level.playSound(player, pos, SoundEvents.UI_BUTTON_CLICK.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                if (!player.isCreative()) module.shrink(1);
+
+            } else if (module.getItem() == ModItems.ADVANCED_VISOR_MODULE.get() && !armor.getOrCreateTag().getBoolean(Modules.ADVANCED_VISOR_MODULE.getRegistryName())) {
+                armor.getOrCreateTag().putBoolean(Modules.ADVANCED_VISOR_MODULE.getRegistryName(), true);
+                level.playSound(player, pos, SoundEvents.UI_BUTTON_CLICK.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                if (!player.isCreative()) module.shrink(1);
+
+            } else if (module.getItem() == ModItems.GLIDER_MODULE.get() && !armor.getOrCreateTag().getBoolean(Modules.GLIDER_MODULE.getRegistryName())) {
+                armor.getOrCreateTag().putBoolean(Modules.GLIDER_MODULE.getRegistryName(), true);
+                level.playSound(player, pos, SoundEvents.UI_BUTTON_CLICK.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                if (!player.isCreative()) module.shrink(1);
+
+            } else if (module.getItem() == ModItems.DETERRENCE_MODULE.get() && !armor.getOrCreateTag().getBoolean(Modules.DETERRENCE_MODULE.getRegistryName())) {
+                armor.getOrCreateTag().putBoolean(Modules.DETERRENCE_MODULE.getRegistryName(), true);
+                level.playSound(player, pos, SoundEvents.UI_BUTTON_CLICK.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                if (!player.isCreative()) module.shrink(1);
+
+            } else if (module.getItem() == ModItems.FIRE_RESISTANT_COATING_MODULE.get() && !armor.getOrCreateTag().getBoolean(Modules.FIRE_RESISTANT_COATING_MODULE.getRegistryName())) {
+                armor.getOrCreateTag().putBoolean(Modules.FIRE_RESISTANT_COATING_MODULE.getRegistryName(), true);
+                level.playSound(player, pos, SoundEvents.UI_BUTTON_CLICK.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                if (!player.isCreative()) module.shrink(1);
+            }
+        }
+    }
+
 
 }

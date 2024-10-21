@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "exocraft:blank_module",
+    "exocraft:snow_walker_module",
+    "exocraft:advanced_visor_module",
+    "exocraft:glider_module",
+    "exocraft:deterrence_module",
+    "exocraft:fire_resistant_coating_module"
+  ]
+}
