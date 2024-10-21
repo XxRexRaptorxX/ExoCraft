@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "exocraft:ion_helmet",
+    "exocraft:ion_leggings",
+    "exocraft:ion_chestplate",
+    "exocraft:ion_boots"
+  ]
+}

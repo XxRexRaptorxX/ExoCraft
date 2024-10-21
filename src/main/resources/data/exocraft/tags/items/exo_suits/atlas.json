@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "exocraft:atlas_helmet",
+    "exocraft:atlas_leggings",
+    "exocraft:atlas_chestplate",
+    "exocraft:atlas_boots"
+  ]
+}

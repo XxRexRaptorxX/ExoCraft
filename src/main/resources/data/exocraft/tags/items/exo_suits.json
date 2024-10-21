@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#exocraft:exo_suits/atlas",
+    "#exocraft:exo_suits/stryder",
+    "#exocraft:exo_suits/legion",
+    "#exocraft:exo_suits/ogre",
+    "#exocraft:exo_suits/ion"
+  ]
+}

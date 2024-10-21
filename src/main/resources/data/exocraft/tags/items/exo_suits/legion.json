@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "exocraft:legion_helmet",
+    "exocraft:legion_leggings",
+    "exocraft:legion_chestplate",
+    "exocraft:legion_boots"
+  ]
+}
