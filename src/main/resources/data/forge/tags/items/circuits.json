@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
-    "#forge:microchips",
     "#forge:circuits/redstone",
-    "#forge:circuits/basic"
+    "#forge:circuits/basic",
+    {
+      "id": "#forge:microchips",
+      "required": false
+    }
   ]
 }
