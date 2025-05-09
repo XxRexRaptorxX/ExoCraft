@@ -8,7 +8,6 @@ import mezz.jei.api.runtime.IIngredientManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import xxrexraptorxx.exocraft.main.References;
 import xxrexraptorxx.exocraft.registry.ModItems;
 
@@ -37,6 +36,9 @@ public class JEIIntegration implements IModPlugin {
 
         registry.addIngredientInfo(units, VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.units_jei_desc"));
         registry.addIngredientInfo(new ItemStack(ModItems.OLD_UNIT.get()), VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.old_unit_jei_desc"));
-
+        registry.addIngredientInfo(new ItemStack(ModItems.SNOW_WALKER_MODULE.get()), VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.snow_walker_module_desc"));
+        registry.addIngredientInfo(new ItemStack(ModItems.ADVANCED_VISOR_MODULE.get()), VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.advanced_visor_module_desc"));
+        registry.addIngredientInfo(new ItemStack(ModItems.GLIDER_MODULE.get()), VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.glider_module_desc"));
+        registry.addIngredientInfo(new ItemStack(ModItems.DETERRENCE_MODULE.get()), VanillaTypes.ITEM_STACK, Component.translatable("message.exocraft.deterrence_module_desc"));
     }
 }
