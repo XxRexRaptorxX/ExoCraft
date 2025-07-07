@@ -17,6 +17,20 @@ You can mix different pieces to get the perfect effects!
 
 -----
 
+### Features:
+
+- many different armor sets with their own effects
+- wear a complete armor set to enhance the effects or mix different pieces to get the perfect effects!
+- upgrade them with modules to get even more features
+- wide compatibility with other tech mods
+- highly configurable
+- emissive textures
+- can be used either with or without energy [FE]
+
+<p align="center">
+  <img src="https://github.com/XxRexRaptorxX/General/blob/main/page_decorations/line.png?raw=true" alt="line" width="2000"/>
+</p>
+
 ### Atlas:
 
 **1 armor piece:** Speed I
@@ -27,7 +41,7 @@ You can mix different pieces to get the perfect effects!
 
 **4 armor pieces:** Speed I + Strength II + Resistance I
 
- -----
+-----
 
 ### Legion:
 
@@ -37,7 +51,7 @@ You can mix different pieces to get the perfect effects!
 
 **3 armor pieces:** Strength II + Haste II
 
-**4 armor pieces:** Strength III +Haste III
+**4 armor pieces:** Strength III + Haste III
 
 ----- 
 
@@ -51,7 +65,7 @@ You can mix different pieces to get the perfect effects!
 
 **4 armor pieces:** Haste II + Fire Resistance I + Water Breathing I
 
- -----
+-----
 
 ### Stryder:
 
@@ -63,7 +77,7 @@ You can mix different pieces to get the perfect effects!
 
 **4 armor pieces:** Haste II + Speed II + Jump Boost I
 
- -----
+-----
 
 ### Ogre:
 
@@ -74,18 +88,6 @@ You can mix different pieces to get the perfect effects!
 **3 armor pieces:** Resistance II + Strength II
 
 **4 armor pieces:** Resistance III + Strength II
-
- -----
-
-### Features:
-
-- many different armor sets with their own effects
-- wear a complete armor set to enhance the effects or mix different pieces to get the perfect effects!
-- upgrade them with modules to get even more features
-- wide compatibility with other tech mods
-- highly configurable
-- emissive textures
-- can be used either with or without energy [FE]
 
 <p align="center">
   <img src="https://github.com/XxRexRaptorxX/General/blob/main/page_decorations/line.png?raw=true" alt="line" width="2000"/>
