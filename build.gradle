@@ -208,6 +208,7 @@ modrinth {
         optional.project "mekanism"
         optional.project "epic-fight"
         optional.project "energized-power"
+        optional.project "industrial-reborn"
     }
 }
 //tasks.modrinth.dependsOn(tasks.modrinthSyncBody) //auto readme sync
